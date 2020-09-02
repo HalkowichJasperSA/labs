@@ -9,31 +9,33 @@ In this lab you will learn:
 - Creating folders and files using the command-line
 - Moving and renaming files
 
-## What is the Terminal?
+## What is the terminal?
 
-On the bottom of your window on the right is a **terminal** panel, which is a text-based or **command-line** interface to your workspace. The command line is very useful in programming because it allows you to explore your workspace's files and directories, compile code, run programs and even install software.
+On the bottom of your window on the right is a **terminal** panel, which is a text-based or **command-line** interface to your workspace. The command line is a powerful tool to explore your workspace's files and directories, compile code, run programs, and even install software.
 
 {% next %}
 
-## Exploring your Workspace
+## Exploring your workspace
 
 Before we start, you may notice three text files open in the code/text editor on the upper right side of your screen. These files are located somewhere in your workspace, but they may not stored in the appropriate directories. We'll take a closer look at these later.
 
-Under the tab that says `>_ Terminal`, is a window with a `$` prompt. This is the terminal window where you can type commands. Let's start by exploring your workspace. Your workspace contains folders (ofter called directories) and files, in the same way as your computer does. Directories can be nested in other directories, just as you have folders stored in other folders on your computer.
+Under the tab that says `>_ Terminal`, is a window with a `$` prompt. This is the terminal window where you can type commands.
 
-## The `ls` and `cd` Terminal Commands
+Let's start by exploring your workspace. Your workspace contains *folders*, aka *directories* (the terms are interchangeable) and files. Directories can be nested inside other directories, just as you might have folders stored in other folders on your computer.
 
-Let's see what files are in the directory in which you are currently positioned (your current working directory). Type in `ls` for **list** next to the `$`, which is your **terminal prompt**. This will list out all the files (including directories) that are the direct children of your current directory.
+## The `ls` and `cd` terminal commands
 
-When you are using the command line, you can see only the files in this directory; you cannot see or access files which are inside of any other directories.
+Let's see what files are in the directory you're currently located in (your current *working directory*). Type `ls` at the `$` (`ls` is short for **list**). This lists all the files (including directories) in your current directory.
 
-You should see `apt1` in blue output under `ls`. Since this is in blue, it indicates that this is a directory. We can see what's inside of `apt1` by changing into the `apt1` directory. Type in:
+When you use `ls`, you'll see only the files in your working directory. You can't see or access files inside other directories.
+
+You should see `apt1/` in blue. The `/` indicates that `apt1` is a directory. We can see what's inside of `apt1` by making it the working directory. Type this:
 
 ```
 cd apt1
 ```
 
-at the `$` prompt for **change directory**, and you will be positioned one level lower. If you type in `ls` again, you will see the files located directly inside of `apt1`. This is similar to having to enter an apartment inside a larger building, to see what's inside of it.
+at the prompt (`cd` is short for **change directory**). If you type `ls` again, you will see the files contained in `apt1`.
 
 {% next %}
 
