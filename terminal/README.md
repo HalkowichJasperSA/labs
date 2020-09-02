@@ -39,80 +39,62 @@ at the prompt (`cd` is short for **change directory**). If you type `ls` again, 
 
 {% next %}
 
-The output of this second `ls` should be `kitchen living_room`. Now type:
+The output of this second `ls` should be `kitchen/   living_room/`. Now type:
 
 ```
 cd living_room
 ```
 
-to change your working directory to `living_room` and take a look to see what is inside with `ls`. We can again think of this like having to walk into a living room, inside of an apartment, to be able to see what's in it.
+to change your working directory to `living_room` and look at what's inside with `ls`.
 
-You'll see `fridge` in blue, meaning it's a directory, and `living_room_contents.txt` in white, meaning it's a regular file and not a directory. In fact this file will most likely be open in the text editor above.
+You'll see `fridge/`, which is a directory, and `living_room_contents.txt` in white, meaning it's a regular file. In fact, this is one of the files you have open in the text editor above.
 
 But shouldn't `fridge` be in the kitchen? Let's `cd` into `fridge` and see what is there.
 
-You should see the file name `fridge_contents.txt` show up in white. You'll see a file with that name in a tab in the text editor on top of your screen. Indeed, this looks like items that should be in the kitchen, not in a living room.
+You'll find one file there: `fridge_contents.txt`, which is also open in the text editor. Indeed, looking at its contents, these seem like items that should be in the kitchen, not in the living room.
 
-Let's fix that by moving the directory `fridge` from `living_room` to `kitchen`. We'll want to do this by first positioning ourselves into the `apt1` directory. To see the entire path of where our current directory is now located type in `pwd` for "print working directory".
+Let's fix that by moving the directory `fridge` from `living_room` to `kitchen`. We'll want to do this by first positioning ourselves in the `apt1` directory. To see the entire path of our current directory (in other words, where we currently are) you can type the command `pwd` (short for **print working directory**).
 
-You'll see that we are are located in `/root/sandbox/apt1/living_room`. This is the entire path from the root of our workspace. We want to go up one level. To do this, type in:
+You'll see that you're located in `/root/sandbox/apt1/living_room`. This is the entire path from the root (or *top* directory) of your workspace. To get to `apt1/` you need to go up one level. To do this, type:
 
 ```
 cd ..
 ```
 
-The two dots mean go up one directory level higher. If you type in `pwd` again you should now see `/root/sandbox/apt1`, meaning that we are in the `apt1` directory.
+The two dots mean "go up one directory level". If you type in `pwd` again you'll now see you're in `/root/sandbox/apt1`.
 
 {% next %}
 
 ## The `mv` Command
 
-You should now be in the `apt1` directory. If you type in `ls` you should once again see `living_room kitchen`. We can now move the fridge directory by typing in:
+Now that you're in `apt1/`, you can now move the `fridge/` by typing:
 
 ```
 mv living_room/fridge kitchen/
 ```
 
-There are three parts to this statement. the `mv` stands for "move", `living_room/fridge` is the `fridge` directory inside the `living_room` directory, and `kitchen/` is the `kitchen` directory. This tells your terminal to move the directory `fridge`, along with it's contents, from the `livingroom` to the `kitchen` directory.
+There are three parts to this statement. the `mv` stands for **move**, `living_room/fridge` identifies the `fridge` directory inside the `living_room` directory, and `kitchen/` is the `kitchen` directory. All together, this tells the computer to move the directory `fridge`, along with its contents, from the `livingroom` to the `kitchen`.
 
-The `fridge_contents` file may disappear from the text editor section on top of your screen, but no worries it's not deleted. You can see a graphical representation of the directory structure by clicking on the folder symbol to the left of `living_room_contents.txt` tab which opens the "Directory Sidebar". You can then click on each of these directories to see exactly what is inside. The `fridge` with its `fridge_contents.txt` should now be where it belongs in the `kitchen`!
+The `fridge_contents` file may disappear from the text editor section on top of your screen, but it's not deleted. You can see a graphical representation of the directory structure by clicking on the folder symbol to the left of the tabs, opening the "Directory Sidebar". You can then click on each of these directories to see exactly what is inside. The `fridge` with its `fridge_contents.txt` should now be where it belongs in the `kitchen`.
 
-The `mv` command is used both to **move** a file as well as to **rename** a file.
+**Note:** The `mv` command is used both to **move** a file as well as to **rename** a file.
 
 {% next %}
 
 ## Making a New Directory with `mkdir`
 
-Let's add a few new rooms to our apartment! First make sure you are positioned in the `apt1` directory. You can check with either `pwd` or `ls`.
+Let's add a few new rooms to our apartment! First make sure you are positioned in the `apt1/` directory. Check this with either `pwd` or `ls`.
 
-Now you can use the command `mkdir` which means "make directory". It will make a new directory inside your current directory. Type in:
+You can use the command `mkdir` which means **make directory**. It will make a new directory inside your working directory. Type:
 
 ```
 mkdir bedroom
 mkdir bathroom
 ```
 
-Now type in `ls` to see what's inside of `apt1`. you should the two new directories show up along with the two previously existing ones. Your apartment should now have four rooms!
+Now type `ls` to see what's in `apt1/`. You'll see the two new directories show up along with the two previously existing ones. Your apartment now has four rooms!
 
 {% next %}
-
-## Creating a New File with `touch`
-
-Before you are finished, let's make a new text file using `touch`.
-
-First, let's create a `bathroom_cabinet` directory inside of `bathroom`. Remember how to change your current directory? You'll want to first move into the `bathroom` directory and then type in:
-
-```
-touch bathroom_cabinet.txt
-```
-Now when you go to the graphical representation of your directory structure in the directory sidebar and click through the folders until you find `bathroom_cabinet.txt`. Click on the icon for this file and your newly created, but blank file, will open in the text editor. You can now type in a few items for your medicine cabinet, such as:
-
-```
-toothbrush
-toothpaste
-face wash
-soap
-```
 
 ## Go Ahead Now and Experiment
 
