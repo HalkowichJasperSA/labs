@@ -96,6 +96,6 @@ Now type `ls` to see what's in `apt1/`. You'll see the two new directories show 
 
 {% next %}
 
-## Go Ahead Now and Experiment
+## Now it's your turn
 
 Now it's your turn to practice the terminal commands you just learned. Try using the `cd` and `ls` commands as you navigate through the directories in your workspace. Create a few new files and directories and then move these files from one directory to another.
