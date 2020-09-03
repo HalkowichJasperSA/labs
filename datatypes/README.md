@@ -42,7 +42,7 @@ int age = get_int("Enter your age: );
 
 ### long
 
-A `long` is similar to an `int`, except that it uses *8* bytes, or *64* bits, of storage, allowing numbers in the range from *-2<sup>63</sup>* to (*2<sup>63</sup> - 1*). These are *very* large numbers.
+A `long` is similar to an `int`, except that it uses *8* bytes (*64* bits) of storage, allowing numbers in the range from *-2<sup>63</sup>* to (*2<sup>63</sup> - 1*). These are *very* large numbers.
 
 The user input function for a `long` is `get_long()`. Using it might look like:
 
@@ -54,7 +54,7 @@ long ccn = get_long("Enter a credit card number: ");
 
 ### float
 
-To store numbers that are not whole numbers, C uses a data type known as a `float`, or **floating-point** number. A float uses *4* bytes to store negative and positive numbers that contain decimals, such as *5.12* or *-17.32*.
+To store values that are not whole numbers, C uses a data type known as a `float`, or **floating-point** number. A float uses *4* bytes to store negative and positive numbers that contain decimals, such as *5.12* or *-17.32*.
 
 Since the computer has a finite number of bits, it cannot represent every floating point number with 100% accuracy. A `float` only has about six digits of precision, which can be a problem when more accuracy is needed. This problem is called **floating-point imprecision**.
 
@@ -98,7 +98,7 @@ at the top of your program. The CS50 library also includes the user input functi
 
 ### string
 
-The `string` data type holds **text**. A `string` variable is different than the data types listed above, since it's really a **pointer** to the memory location of a series of `char`'s, or characters that make up the string.
+The `string` data type holds **text**. A `string` variable is different than the data types listed above, since it's really a **pointer** to the memory location of a series of `char`s, or characters that make up the string. If that didn't make sense to you yet, don't worry, you'll learn about pointers in a later lesson.
 
 Strings in C must be surrounded by double quotes (`"`). For instance:
 
@@ -121,13 +121,18 @@ Example:
 ```c
 bool game_started = true;
 bool game_finished = false;
+
+if (game_finished)
+{
+    printf("Game over\n");
+}
 ```
 
 {% next %}
 
 ## Practice using data types
 
-In the text editor to the right, you will see **comments** (lines starting with `//`) explaining what each missing line of code should be doing. Your job is to complete this missing code, to declare and get user input for each of these data types shown above.
+In the text editor to the right, you will see **comments** (lines starting with `//`) explaining what each missing line of code should be doing. Your job is to complete this missing code, to declare and get user input for each of these data types indicated.
 
 The first of these is already done for you.
 
@@ -146,11 +151,12 @@ If you see any errors, try to look for hints in the rather cryptic hints given. 
 ```
 help50 make datatypes
 ```
+
 at the command line for additional hints.
 
-Remember each time you correct an error you must compile your code again to execute the most recent version of your program.
+Remember, each time you correct an error you must compile your code again to execute the most recent version of your program.
 
-Finally **execute** your program with:
+Finally, **execute** your program with:
 
 ```
 ./datatypes

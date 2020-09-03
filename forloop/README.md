@@ -1,18 +1,19 @@
-# For Loop
+# `for` loop
 
 In this lab you will learn:
 
-- Why we have a for loop
-- How to use a for loop
+- The purpose of a for loop
+- How to use it
 
-## What is a For Loop?
+## What is a `for` loop?
 
-The **for loop** is probably the most frequently used loop of the three types of loops. It is very useful when we want to repeat something a known number of times.
+The **for loop** is probably the most frequently used of the three types of loops. It's very useful when you want to repeat something a known number of times.
 
-Eventually we'll see how for loops can be useful for:
-* Repeating a block of code 10 or 20 or *n* times when you know in advance the value of *n*
+You'll see how they can be useful for:
+
+* Repeating a block of code *10*, *20*, or *n* times when you know in advance the value of *n*
 * Accessing each individual character in a string
-* Looking at each element in an array (more on this to come later!)
+* Looking at each element in an array (more on this in later lessons)
 
 Let's start by taking a look at the analogous loop in Scratch.
 
@@ -31,17 +32,15 @@ for (int i = 0; i < 50; i++)
 
 A for loop has three parts (included in parentheses after the word for, and separated by semicolons)
 
-* **Initialization**: `int i = 0` is an initialization of the `int` variable `i`, which means that we created a variable and set its initial value to 0. `i` is a conventional name for a counting variable that keeps track of how many iterations of the loop we’ve already done.
+* **Initialization**: `int i = 0` is an initialization of the `int` variable `i`, which means that we created a variable and set its initial value to 0. `i` is a conventional name for a counting variable, but you are free to use any variable name you like.
 
-* **Loop Condition**:  Then `i < 50` is the Boolean expression that the for loop checks, to determine if it will continue or not. When this condition is true, the for loop will run the code inside the curly braces. And since we started `i` at 0, stopping before `i` reaches 50 will mean this runs exactly 50 times, as we intended.
+* **Loop Condition**:  `i < 50` is the Boolean expression that the loop checks to determine if it will continue. When this condition is `true`, the loop will run the code inside the curly braces. Since `i` started at 0, stopping before `i` reaches 50 will mean this loop repeats exactly 50 times, intended.
 
-* **Increment Statement**:  The third part is the loop modification. This code is executed at the end of every loop. In this case, we increase the value of `i` by 1. As soon as `i` is no longer less than 50, the condition fails and the loop will end. The end result is that `hello world\n` is displayed exactly 50 times.
+* **Increment Statement**:  This statement is executed at the end of every loop. In this case, it increases the value of `i` by *1* before continuing to the next iteration.
 
 {% next %}
 
-By taking advantage of loop modification, you can also get a loop to do something slightly different each time the loop repeats, or iterates.
-
-For example, let's look at the following code:
+Since the loop variable is an ordinary variable, you can use it in the loop. Consider the following code:
 
 ```c
 for (int j = 1; j <= 10; j++)
@@ -50,17 +49,17 @@ for (int j = 1; j <= 10; j++)
 }
 ```
 
-Here we start our counting variable, `j`, at 1 and execute the loop until `j` is no longer less than or equal to 10. Our first execution of the loop prints 1 on its own line. We then increment `j` by 1 and check the condition to see if it's still true. Since `j` is now 2, it's true that `2 <= 10` so the loop repeats printing 2 on it's own line. This continues until we've printed out the count from 1 to 10 inclusive.
+Can you see what this loop will print? Feel free to try it out by typing the code and compiling it on the right. What is the difference between using `j <= 10` and `j < 10` for the loop condition.
 
 {% next %}
 
-## Your Turn
+## Your turn
 
-Modify the code on the right to add up the numbers from 1 to 10, using either the supplied for loop or creating your own. Store the total in the variable named `total`.
+Modify the code on the right to sum the numbers from 1 to 10, using either the supplied for loop or creating your own. Store the total in a variable named `total`.
 
 {% spoiler "Hint" %}
 
-Keep in mind that you can use the value of `i` in your calculation. You can also change the loop so start at one and end when `i <= 10`. This gives you a value which can be added to `total` during each iteration.
+Keep in mind that you can use the value of `i` in your calculation. You can also change the loop to start at one and end when `i <= 10`. This gives you a value which can be added to `total` during each iteration.
 
 {% endspoiler %}
 
