@@ -5,7 +5,7 @@
 In this lab you will learn:
 
 - How to use a command-line interface
-- Terminal commands to navigate through your workspace
+- Terminal commands to navigate your workspace
 - Creating folders and files using the command-line
 - Moving and renaming files
 
@@ -17,7 +17,7 @@ On the bottom of your window on the right is a **terminal** panel, which is a te
 
 ## Exploring your workspace
 
-Before we start, you may notice three text files open in the code/text editor on the upper right side of your screen. These files are located somewhere in your workspace, but they may not stored in the appropriate directories. We'll take a closer look at these later.
+Before you start, you may notice three text files open in the code/text editor on the upper right side of your screen. These files are located somewhere in your workspace, but they may not stored in the appropriate directories. We'll take a closer look at these later.
 
 Under the tab that says `>_ Terminal`, is a window with a `$` prompt. This is the terminal window where you can type commands.
 
@@ -29,7 +29,7 @@ Let's see what files are in the directory you're currently located in (your curr
 
 When you use `ls`, you'll see only the files in your working directory. You can't see or access files inside other directories.
 
-You should see `apt1/` in blue. The `/` indicates that `apt1` is a directory. We can see what's inside of `apt1` by making it the working directory. Type this:
+You should see `apt1/` in blue. The `/` indicates that `apt1` is a directory. You can see what's inside of `apt1` by making it the working directory. Type this:
 
 ```
 cd apt1
@@ -53,7 +53,7 @@ But shouldn't `fridge` be in the kitchen? Let's `cd` into `fridge` and see what 
 
 You'll find one file there: `fridge_contents.txt`, which is also open in the text editor. Indeed, looking at its contents, these seem like items that should be in the kitchen, not in the living room.
 
-Let's fix that by moving the directory `fridge` from `living_room` to `kitchen`. We'll want to do this by first positioning ourselves in the `apt1` directory. To see the entire path of our current directory (in other words, where we currently are) you can type the command `pwd` (short for **print working directory**).
+Let's fix that by moving the directory `fridge` from `living_room` to `kitchen`. You'll want to do this by first positioning yourself in the `apt1` directory. To see the entire path of your current directory (in other words, where you *currently* are) you can type the command `pwd` (short for **print working directory**).
 
 You'll see that you're located in `/root/sandbox/apt1/living_room`. This is the entire path from the root (or *top* directory) of your workspace. To get to `apt1/` you need to go up one level. To do this, type:
 
