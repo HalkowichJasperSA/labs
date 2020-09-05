@@ -106,3 +106,13 @@ And be sure to execute your program, testing it a few times with different input
 ./hello
 ```
 
+### Staff's Solution
+
+To try out the staff's implementation of this problem, execute
+
+<pre>
+./hello
+</pre>
+
+within [this sandbox](http://bit.ly/2Qp0a2g).
+
