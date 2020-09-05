@@ -5,11 +5,11 @@ In this lab you will learn about:
 - What hexadecimal is
 - Why it is useful
 
-## What is Hexadecimal?
+## What is hexadecimal?
 
-Earlier this year we learned about number systems. Specifically about the **binary** number system, which is how computers store data ranging from numeric values and ASCII characters to source code and images. Binary systems (which use base 2) store all data as 0's and 1's. We contrasted this to our everyday **decimal** number system (base 10) which uses ten digits, `0-9`. **Hexadecimal** is a numbering system which uses 16 symbols. In addition to the symbols `0-9`, we use `a`, `b`, `c`, `d`, `e`, and `f`, for the higher values of 10, 11, 12, 13, 14, and 15.
+Earlier this year you learned about number systems; specifically about the **binary** number system, which is how computers store data. Binary systems (which use base *2*) store all data as *0*s and *1*s. We contrasted this to our everyday **decimal** number system (base *10*) which uses ten digits, `0-9`. **Hexadecimal** is a numbering system which uses 16 symbols. In addition to the symbols `0-9`, it uses `a`, `b`, `c`, `d`, `e`, and `f`, for the additional digits (corresponding to `10`, `11`, `12`, `13`, `14`, and `15` in decimal.
 
-In the same way as decimal numbers have place values that are powers of ten, and binary numbers use place values that are powers of two, hexadecimal numbers have place values that are powers of sixteen. So the hexadecimal number `0x13BA` (hexadecimal numbers are represented with `0x` in front of the value) would equate to 16<sup>0</sup> x A (A is the symbol for 10) plus 16<sup>1</sup> x B (or 11) plus 3 x 16<sup>2</sup> plus 1 x 16<sup>3</sup> which is 10 + 176 + 768 + 4096. Added up, these total to 5050.
+In the same way that decimal numbers have place values that are powers of ten, and binary numbers use place values that are powers of two, hexadecimal numbers have place values that are powers of sixteen. So the hexadecimal number `0x13BA` (hexadecimal numbers identified by `0x` in front of the value) would equate to `16<sup>0</sup> x A` (A is the symbol for 10) plus `16<sup>1</sup> x B` (or 11) plus `3 x 16<sup>2</sup>` plus `1 x 16<sup>3</sup>` which is `10 + 176 + 768 + 4096` for a total of *5050*.
 
 {% next %}
 
@@ -23,7 +23,7 @@ A very popular use of hexadecimal numbers is when referencing colors. Colors on 
 
 ## Your Turn
 
-Complete the second `for` loop in the program on the right to convert a hexadecimal number to a decimal (base 10) number. 
+Complete the second `for` loop in the program on the right to convert a hexadecimal number to a decimal (base 10) number.
 
 After prompting the user for a hexadecimal number, the program iterates through the string and uses a function `isxdigit()` which checks that each character is a legal hexadecimal digit. The same loop then changes all digits to lower case, so that you can use the same algorithm to convert `'a'` or `'A'` to the `int` `10`.
 
