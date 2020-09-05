@@ -70,3 +70,39 @@ Hello there again!
 
 {% next %}
 
+## Making Things Easier
+
+Recall that we can automate the process of executing `clang`, letting `make` figure out how to do so for us, thereby saving us some keystrokes. Execute the below to compile this program one last time.
+
+```
+make hello
+```
+
+You should see that `make` executes `clang` with even more command-line arguments for you? More on those, too, another time!
+
+Now execute the program itself one last time by executing the below.
+
+```
+./hello
+```
+
+Phew!
+
+## Getting User Input
+
+Suffice it to say, no matter how you compile or execute this program, it only ever prints `hello, world`. Let's personalize it a bit, just as we did in class.
+
+Modify this program in such a way that it first prompts the user for their name and then prints `hello, so-and-so`, where `so-and-so` is their actual name.
+
+As before, be sure to compile your program with:
+
+```
+make hello
+```
+
+And be sure to execute your program, testing it a few times with different inputs, with:
+
+```
+./hello
+```
+
