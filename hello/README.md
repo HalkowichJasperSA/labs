@@ -116,9 +116,7 @@ To try out the staff's implementation of this problem, execute
 
 within [this sandbox](http://bit.ly/2Qp0a2g).
 
-### Walkthrough
 
-{% video https://www.youtube.com/watch?v=wSk1KSDUEYA %}
 
 {% spoiler "Hints" %}
 
