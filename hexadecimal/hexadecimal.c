@@ -18,7 +18,7 @@ int main(void)
         }
         else
         {
-            hex[i] = tolower(hex[i]);
+            hex[i] = toupper(hex[i]);
         }
     }
 
