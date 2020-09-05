@@ -106,13 +106,63 @@ And be sure to execute your program, testing it a few times with different input
 ./hello
 ```
 
-### Staff's Solution
+### Walkthrough
 
-To try out the staff's implementation of this problem, execute
+{% video https://www.youtube.com/watch?v=wSk1KSDUEYA %}
 
-<pre>
-./hello
-</pre>
+{% spoiler "Hints" %}
 
-within [this sandbox](http://bit.ly/2Qp0a2g).
+#### Don't recall how to prompt the user for their name?
 
+Recall that you can use `get_string` as follows, storing its *return value* in a variable called `name` of type `string`.
+
+```c
+string name = get_string("What is your name?\n");
+```
+
+#### Don't recall how to format a string?
+
+Don't recall how to join (i.e., concatenate) the user's name with a greeting? Recall that you can use `printf` not only to print but to format a string (hence, the `f` in `printf`), a la the below, wherein `name` is a `string`.
+
+```c
+printf("hello, %s\n", name);
+```
+
+#### Use of undeclared identifier?
+
+Seeing the below, perhaps atop other errors?
+
+```
+error: use of undeclared identifier 'string'; did you mean 'stdin'?
+```
+
+Recall that, to use `get_string`, you need to include `cs50.h` (in which `get_string` is *declared*) atop a file, as with:
+
+```c
+#include <cs50.h>
+```
+{% spoiler %}
+
+### How to Test Your Code
+
+Once you've tested the program yourself, execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
+
+```
+check50 scienceacademy/problems/2020ap/hello
+```
+
+Execute the below to evaluate the style of your code using `style50`.
+
+```
+style50 hello.c
+```
+
+{% next %}
+
+## How to Submit
+
+Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
+
+```
+submit50 scienceacademy/problems/2020ap/hello
+```
