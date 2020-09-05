@@ -143,26 +143,3 @@ Recall that, to use `get_string`, you need to include `cs50.h` (in which `get_st
 ```
 {% spoiler %}
 
-### How to Test Your Code
-
-Once you've tested the program yourself, execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
-
-```
-check50 scienceacademy/problems/2020ap/hello
-```
-
-Execute the below to evaluate the style of your code using `style50`.
-
-```
-style50 hello.c
-```
-
-{% next %}
-
-## How to Submit
-
-Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
-
-```
-submit50 scienceacademy/problems/2020ap/hello
-```
