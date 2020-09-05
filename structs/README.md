@@ -67,4 +67,4 @@ You may declare either a single variable or an array using your new data type. I
 
 Be sure to test your code with valid data, invalid data, and corner cases!
 
-[Download our CS50 Reference sheet on Structures and Encapsulation](https://cs50.harvard.edu/ap/2020/assets/pdfs/structures_and_encapsulation.pdf)
+[Download the CS50 Reference sheet on Structures and Encapsulation](https://cs50.harvard.edu/ap/2020/assets/pdfs/structures_and_encapsulation.pdf)
