@@ -9,13 +9,17 @@ In this lab you will learn about:
 
 Earlier this year you learned about number systems; specifically about the **binary** number system, which is how computers store data. Binary systems (which use base *2*) store all data as *0*s and *1*s. We contrasted this to our everyday **decimal** number system (base *10*) which uses ten digits, `0-9`. **Hexadecimal** is a numbering system which uses 16 symbols. In addition to the symbols `0-9`, it uses `a`, `b`, `c`, `d`, `e`, and `f`, for the additional digits (corresponding to `10`, `11`, `12`, `13`, `14`, and `15` in decimal.
 
-In the same way that decimal numbers have place values that are powers of ten, and binary numbers use place values that are powers of two, hexadecimal numbers have place values that are powers of sixteen. So the hexadecimal number `0x13BA` (hexadecimal numbers identified by `0x` in front of the value) would equate to 16<sup>0</sup> x A (A is the symbol for 10) plus 16<sup>1</sup> x B (or 11) plus 3 x 16<sup>2</sup> plus 1 x 16<sup>3</sup> which is `10 + 176 + 768 + 4096` for a total of *5050*.
+In the same way that decimal numbers have place values that are powers of ten, and binary numbers use place values that are powers of two, hexadecimal numbers have place values that are powers of sixteen. So the hexadecimal number `0x13BA` (hexadecimal numbers identified by `0x` in front of the value) would equate to 16<sup>0</sup> x A (A is the symbol for 10) plus 16<sup>1</sup> x B (or 11) plus 16<sup>2</sup> x 3 plus 16<sup>3</sup> x 1 which is `10 + 176 + 768 + 4096` for a total of *5050*.
 
 {% next %}
 
-## Why is Hexadecimal useful?
+## Why is hexadecimal useful?
 
-It turns out that binary numbers get very large very quickly. To express the decimal number 15, for instance, we need four place values in binary: 1 1 1 1. Because four digits of binary can represent 16 values, computer scientists settled on hexadecimal, a number system of base 16, to represent those larger numbers.
+It turns out that binary numbers get very large very quickly. To express the decimal number 15, for instance, we need four place values in binary: `1111`. To express the number *5050* above, we'd need 13 places: `1001110111010`.
+
+Note that there's a relationship: *4* digits of binary represent values from 0-15, and *1* digit of hexadecimal represents the same range. For this reason, computer scientists settled on hexadecimal as a more convenient way to represent those larger numbers.
+
+> Note: Here's another handy example: Remember that *8* bits represent one **byte**? We can write those values, which range from 0-255, with just two digits of hexadecimal. It's much more convenient to write `0xff` than `0b11111111`.
 
 A very popular use of hexadecimal numbers is when referencing colors. Colors on a computer are made up of red, green and blue values (RGB) each of these in the range of `0-255`, which is the range of values represented by one byte or eight bits. Hex color codes are usually of the format `#rrggbb` where the `rr` is a hex value from `00` to `FF` representing the amount of red, `gg` represents a hex value for green, and `bb` represents a hex value for blue. So for instance `#000000` represents black since each color is displayed at their lowest possible intensity, and `#FFFFFF` represents mixing each of the three primary colors at their full intensity which gives us white.
 
