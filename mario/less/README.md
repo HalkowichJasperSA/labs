@@ -2,11 +2,11 @@
 
 ## World 1-1
 
-Toward the end of World 1-1 in Nintendo's Super Mario Brothers, Mario must ascend right-aligned pyramid of blocks, a la the below.
+Toward the end of World 1-1 in Nintendo's _Super Mario Brothers_, Mario must ascend a right-aligned pyramid of blocks, as shown below.
 
 ![screenshot of Mario jumping up a right-aligned pyramid](pyramid.png)
 
-Let's recreate that pyramid in C, albeit in text, using hashes (`#`) for bricks, a la the below. Each hash is a bit taller than it is wide, so the pyramid itself is also be taller than it is wide.
+Let's recreate that pyramid in C, albeit in text, using hashes (`#`) for bricks, a la the below. Each hash is a bit taller than it is wide (at least for the font we're using), so the pyramid itself will also appear taller than it is wide.
 
 ```
        #
@@ -19,7 +19,7 @@ Let's recreate that pyramid in C, albeit in text, using hashes (`#`) for bricks,
 ########
 ```
 
-The program we'll write will be called `mario`. And let's allow the user to decide just how tall the pyramid should be by first prompting them for a positive integer between, say, 1 and 8, inclusive.
+The program we'll write will be called `mario`. And let's allow the user to decide just how tall the pyramid should be by first prompting them for a positive integer between 1 and 8, inclusive.
 
 Here's how the program might work if the user inputs `8` when prompted:
 
@@ -81,7 +81,7 @@ Height: 4
 
 {% spoiler "Try It" %}
 
-To try out the staff's implementation of this problem, execute
+To try out an example implementation of this problem, execute
 
 ```
 ./mario
@@ -99,7 +99,7 @@ How to begin? Let's approach this problem one step at a time.
 
 ## Pseudocode
 
-First, write in `pseudocode.txt` at right some pseudocode that implements this program, even if not (yet!) sure how to write it in code. There's no one right way to write pseudocode, but short English sentences suffice. Recall how we wrote pseudocode for [finding Mike Smith](https://docs.google.com/presentation/d/17wRd8ksO6QkUq906SUgm17AqcI-Jan42jkY-EmufxnE/edit?usp=sharing). Odds are your pseudocode will use (or imply using!) one or more functions, conditions, Boolean expressions, loops, and/or variables.
+First, write in `pseudocode.txt` at right some pseudocode that implements this program, even if you're not (yet!) sure how to write it in code. There's no one right way to write pseudocode, but short English sentences suffice. Recall how we wrote pseudocode for [finding Mike Smith](https://docs.google.com/presentation/d/17wRd8ksO6QkUq906SUgm17AqcI-Jan42jkY-EmufxnE/edit?usp=sharing). Odds are your pseudocode will use (or imply using!) one or more functions, conditions, Boolean expressions, loops, and/or variables.
 
 {% spoiler %}
 
@@ -110,7 +110,7 @@ There's more than one way to do this, so here's just one!
 1. Iterate from 1 through height:
     1. On iteration *i*, print *i* hashes and then a newline
 
-It's okay to edit your own after seeing this pseudocode here, but don't simply copy/paste ours into your own!
+It's okay to edit your own after seeing this pseudocode here, but don't simply copy/paste this into your own!
 
 {% endspoiler %}
 
@@ -120,7 +120,7 @@ It's okay to edit your own after seeing this pseudocode here, but don't simply c
 
 Whatever your pseudocode, let's first write only the C code that prompts (and re-prompts, as needed) the user for input.
 
-Specifically, modify `mario.c` at right in such a way that it prompts the user for the pyramid's height, storing their input in a variable, re-prompting the user again and again as needed if their input is not a positive integer between 1 and 8, inclusive. Then, simply print the value of that variable, thereby confirming (for yourself) that you've indeed stored the user's input successfully, a la the below.
+Specifically, modify `mario.c` at right in such a way that it prompts the user for the pyramid's height, storing their input in a variable, re-prompting the user again and again as needed if their input is not a positive integer between 1 and 8, inclusive. Then, just print the value of that variable, thereby confirming (for yourself) that you've indeed stored the user's input successfully, a la the below.
 
 ```
 $ ./mario
@@ -129,7 +129,7 @@ Height: 0
 Height: 42
 Height: 50
 Height: 4
-Stored: 4
+OK: 4
 ```
 
 {% spoiler "Hints" %}
@@ -138,7 +138,7 @@ Stored: 4
 * Recall that you can print an `int` with `printf` using `%i`.
 * Recall that you can get an integer from the user with `get_int`.
 * Recall that `get_int` is declared in `cs50.h`.
-* Recall that we prompted the user for a positive integer in class via [`positive.c`](https://sandbox.cs50.io/0b420c22-923d-43fd-a10f-9cfce79b1f9a).
+* Recall that we prompted the user for a positive integer in the lecture via [`positive.c`](https://sandbox.cs50.io/0b420c22-923d-43fd-a10f-9cfce79b1f9a).
 
 {% endspoiler %}
 
@@ -146,7 +146,7 @@ Stored: 4
 
 Now that your program is (hopefully!) accepting input as prescribed, it's time for another step.
 
-It turns out it's a bit easier to build a left-aligned pyramid than right-, a la the below.
+It turns out it's a bit easier to build a left-aligned pyramid than right-, like this:
 
 ```
 #
@@ -166,8 +166,8 @@ Modify `mario.c` at right such that it no longer simply prints the user's input 
 {% spoiler "Hints" %}
 
 * Keep in mind that a hash is just a character like any other, so you can print it with `printf`.
-* Just as Scratch has a [Repeat](https://docs.google.com/presentation/d/17wRd8ksO6QkUq906SUgm17AqcI-Jan42jkY-EmufxnE/edit?usp=sharing) block, so does C have a [`for`](https://docs.google.com/presentation/d/191XW0DHWlW6WmAhYuFUYnZKUlDx0N4u4Fp81AeW-uNs/edit?usp=sharing) loop, via which you can iterate some number times. Perhaps on each iteration, *i*, you could print that many hashes?
-* You can actually "nest" loops, iterating with one variable (e.g., `i`) in the "outer" loop and another (e.g., `j`) in the "inner" loop. For instance, here's how you might print a square of height and width `n`, below. Of course, it's not a square that you want to print!
+* In C we have a [`for`](https://docs.google.com/presentation/d/191XW0DHWlW6WmAhYuFUYnZKUlDx0N4u4Fp81AeW-uNs/edit?usp=sharing) loop, via which you can iterate some number times. Perhaps on each iteration, *i*, you could print that many hashes?
+* You can actually "nest" loops, iterating with one variable (e.g., `i`) in the "outer" loop and another (e.g., `j`) in the "inner" loop. For instance, here's how you might print a square of height and width `n`, below. Of course, it's not a square that you want to print for this problem!
 
     ```
     for (int i = 0; i < n; i++)
@@ -203,33 +203,33 @@ Modify `mario.c` in such a way that it does exactly that!
 
 {% spoiler "Hint" %}
 
-Notice how the number of dots needed on each line is the "opposite" of the number of that line's hashes. For a pyramid of height 8, like the above, the first line has but 1 hash and thus 7 dots. The bottom line, meanwhile, has 8 hashes and thus 0 dots. Via what formula (or arithmetic, really) could you print that many dots?
+Notice how the number of dots needed on each line is the "opposite" of the number of that line's hashes. For a pyramid of height 8, like the above, the first line has just 1 hash and thus 7 dots. The bottom line, meanwhile, has 8 hashes and thus 0 dots. Via what formula (or arithmetic, really) could you print the right number of dots and hashes on each line?
 
 {% endspoiler %}
 
 ### How to Test Your Code
 
-Does your code work as prescribed when you input
+Does your code work as prescribed when you input:
 
 * `-1` (or other negative numbers)?
 * `0`?
 * `1` through `8`?
 * `9` or other positive numbers?
 * letters or words?
-* no input at all, when you only hit Enter?
+* no input at all, when you just hit Enter?
 
 {% next %}
 
 ## Removing the Dots
 
-All that remains now is a finishing flourish! Modify `mario.c` in such a way that it prints spaces instead of those dots!
+All that remains now is a finishing flourish! Modify your program so that it prints spaces instead of those dots!
 
 ### How to Test Your Code
 
 Execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```
-check50 cs50/problems/2020/x/mario/less
+check50 scienceacademy/problems/2020ap/mario/less
 ```
 
 Execute the below to evaluate the style of your code using `style50`.
@@ -251,5 +251,5 @@ A space is just a press of your space bar, just as a period is just a press of i
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/problems/2020/x/mario/less
+submit50 scienceacademy/problems/2020ap/mario/less
 ```

@@ -6,7 +6,7 @@ Toward the beginning of World 1-1 in Nintendo's Super Mario Brothers, Mario must
 
 ![screenshot of Mario jumping over adjacent pyramids](pyramids.png)
 
-Let's recreate those pyramids in C, albeit in text, using hashes (`#`) for bricks, a la the below. Each hash is a bit taller than it is wide, so the pyramids themselves are also be taller than they are wide.
+Let's recreate those pyramids in C, albeit in text, using hashes (`#`) for bricks, a la the below. Each hash is a bit taller than it is wide (at least for the font we're using), so the pyramids themselves will also appear taller than they are wide.
 
 ```
    #  #
@@ -80,9 +80,9 @@ Notice that width of the "gap" between adjacent pyramids is equal to the width o
 
 Modify `mario.c` at right in such a way that it implements this program as described!
 
-{% spoiler "Staff's Solution" %}
+{% spoiler "Try It" %}
 
-To try out the staff's own implementation of `mario`, execute
+To try out an example implementation of this problem, execute
 
 ```
 ./mario
@@ -110,7 +110,7 @@ Does your code work as prescribed when you input
 You can also execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```
-check50 cs50/problems/2020/x/mario/more
+check50 scienceacademy/problems/2020ap/mario/more
 ```
 
 Execute the below to evaluate the style of your code using `style50`.
@@ -126,5 +126,5 @@ style50 mario.c
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/problems/2020/x/mario/more
+submit50 scienceacademy/problems/2020ap/mario/more
 ```

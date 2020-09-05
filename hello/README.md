@@ -12,9 +12,9 @@ Next, in the *terminal window* at right, immediately to the right of the dollar 
 ls
 ```
 
-You should see just `hello.c`? That's because you've just listed the files in that same folder, this time using a command-line interface (CLI), using just your keyboard, rather than the graphical user interface (GUI) represented by that folder icon. In particular, you *executed* (i.e., ran) a command called `ls`, which is shorthand for "list." (It's such a frequently used command that its authors called it just `ls` to save keystrokes.) Make sense?
+Do you see only `hello.c`? That's because you've just listed the files in that same folder, this time using a command-line interface (CLI), using your keyboard, rather than the graphical user interface (GUI) represented by that folder icon. In particular, you *executed* (i.e., ran) a command called `ls`, which is shorthand for "list." (It's such a frequently used command that its authors called it just `ls` to save keystrokes.) Make sense?
 
-Here on out, to execute (i.e., run) a command means to type it into a terminal window and then hit Enter. Commands are "case-sensitive," so be sure not to type in uppercase when you mean lowercase or vice versa.
+From here on out, to "execute" (i.e., run) a command means to type it into a terminal window and then hit Enter. Commands are *case-sensitive*, so be sure not to type in uppercase when you mean lowercase or vice versa.
 
 {% next %}
 
@@ -32,7 +32,9 @@ And then execute this one again:
 ls
 ```
 
-This time, you should see not only `hello.c` but `a.out` listed as well? (You can see the same graphically if you click that folder icon again.) That's because `clang` has translated the source code in `hello.c` into machine code in `a.out`, which happens to stand for "assembler output," but more on that another time.
+This time, you should see not only `hello.c` but `a.out*` listed as well? (You can see the same graphically if you click that folder icon again.) That's because `clang` has translated the source code in `hello.c` into machine code in `a.out`, which happens to stand for "assembler output," but more on that another time.
+
+Also note that the `*` next to the filename indicates this file is an *executable*, or a file that contains machine code that can be run.
 
 Now run the program by executing the below.
 
@@ -52,7 +54,7 @@ Now, `a.out` isn't the most user-friendly name for a program. Let's compile `hel
 clang -o hello hello.c
 ```
 
-Take care not to overlook any of those spaces therein! Then execute this one again:
+Take care not to overlook any of those spaces! Then execute this one again:
 
 ```
 ls
@@ -118,7 +120,7 @@ within [this sandbox](http://bit.ly/2Qp0a2g).
 
 {% video https://www.youtube.com/watch?v=wSk1KSDUEYA %}
 
-### Hints
+{% spoiler "Hints" %}
 
 #### Don't recall how to prompt the user for their name?
 
@@ -149,13 +151,14 @@ Recall that, to use `get_string`, you need to include `cs50.h` (in which `get_st
 ```c
 #include <cs50.h>
 ```
+{% spoiler %}
 
 ### How to Test Your Code
 
-Execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
+Once you've tested the program yourself, execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```
-check50 cs50/problems/2020/x/hello
+check50 scienceacademy/problems/2020ap/hello
 ```
 
 Execute the below to evaluate the style of your code using `style50`.
@@ -171,5 +174,5 @@ style50 hello.c
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/problems/2020/x/hello
+submit50 scienceacademy/problems/2020ap/hello
 ```

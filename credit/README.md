@@ -50,7 +50,7 @@ Number: 4003600000000014
 VISA
 ```
 
-Now, `get_long` itself will reject hyphens (and more) anyway:
+Note: `get_long` itself will reject hyphens (and more) anyway:
 
 ```
 $ ./credit
@@ -93,7 +93,7 @@ within [this sandbox](http://bit.ly/2QnNB7n).
 You can also execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```
-check50 cs50/problems/2020/x/credit
+check50 scienceacademy/problems/202ap/credit
 ```
 
 Execute the below to evaluate the style of your code using `style50`.
@@ -109,5 +109,5 @@ style50 credit.c
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/problems/2020/x/credit
+submit50 scienceacademy/problems/202ap/credit
 ```
