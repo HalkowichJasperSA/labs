@@ -50,7 +50,7 @@ age = age + 1;
 
 In Algebra, you'd attempt to solve for `age`, and this would be impossible. How can age equal itself plus one?
 
-But if you remember that the `=` represents assignment, and not equality, you can read this as: "addi one to the current value stored in `age`, then reassign this new value to `age`".
+But if you remember that the `=` represents assignment, and not equality, you can read this as: "add one to the current value stored in `age`, then reassign this new value to `age`".
 
 Keep in mind when you write a statement like this, you must have already assigned an initial value to `age`. For example:
 
