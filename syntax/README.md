@@ -1,6 +1,6 @@
 # Syntax
 
-![SyntaxVideo](https://raw.githubusercontent.com/cs50nestm/cs50labs/2019/syntax/syntax.gif)
+![SyntaxVideo](https://raw.githubusercontent.com/scienceacademy/labs/2020ap/syntax/syntax.gif)
 
 In this lab you will learn:
 
@@ -81,7 +81,9 @@ Now execute your program by typing in the following, again followed with `enter`
 ./syntax
 ```
 
-### Styling with `style50`
+### Code style
+
+![Code style](code_quality.png)
 
 Though C doesn't care about how you style your code (in other words code with correct syntax but inconsistent spacing will compile and execute), your teacher does (and you should)! That's because formatting your code consistently makes it easier to read and as you'll soon find, easier to debug.
 
