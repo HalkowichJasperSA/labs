@@ -1,6 +1,6 @@
 # Syntax
 
-![SyntaxVideo](https://raw.githubusercontent.com/scienceacademy/labs/2020ap/syntax/syntax.gif)
+![SyntaxVideo](syntax.gif)
 
 In this lab you will learn:
 
@@ -61,7 +61,7 @@ Now it's your turn to try out decoding some syntax in C!
 
 Take a look at the program on the right. There are several syntactical errors in it. See if you can edit the code to correct the errors. Look carefully at all the details in the example above for reference.
 
-When you are done, **compile** your program by typing the following in the terminal window after the `$` prompt followed by Enter.
+When you are done, **compile** your program by typing the following in the terminal window after the `$` prompt followed by pressing enter.
 
 ```
 make syntax
@@ -75,7 +75,7 @@ help50 make syntax
 
 Once you feel you've corrected any errors, execute `make syntax` again, and repeat this process until no more errors appear.
 
-Now execute your program by typing in the following, again followed with `enter`:
+Now execute your program by typing in the following, again followed by enter:
 
 ```
 ./syntax
