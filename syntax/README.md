@@ -81,6 +81,10 @@ Now execute your program by typing in the following, again followed by enter:
 ./syntax
 ```
 
+[For more info, download the CS50 Syntax Reference Sheet](https://cs50.harvard.edu/ap/2020/assets/pdfs/syntax.pdf)
+
+{% next %}
+
 ### Code style
 
 ![Code style](code_quality.png)
@@ -101,6 +105,22 @@ When style50 outputs:
     <pre><code>Looks good!</code></pre>
 </div>
 
-you are done! Congratulations, you've completed the syntax lab!
+you are stylish!
 
-[For more info, download the CS50 Syntax Reference Sheet](https://cs50.harvard.edu/ap/2020/assets/pdfs/syntax.pdf)
+{% next %}
+
+### How to Test Your Code
+
+Once you've tested the program yourself, execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
+
+```
+check50 scienceacademy/problems/2020ap/syntax
+```
+
+## How to Submit
+
+Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
+
+```
+submit50 scienceacademy/problems/2020ap/syntax
+```
