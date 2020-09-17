@@ -81,5 +81,5 @@ style50 hello.py
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 scienceacademy/problems/2020ap/hello
+submit50 scienceacademy/problems/2020python/hello
 ```
