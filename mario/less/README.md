@@ -91,10 +91,10 @@ First, write in `pseudocode.txt` at right some pseudocode that implements this p
 
 There's more than one way to do this, so here's just one!
 
-1. Prompt user for height
-1. If height is less than 1 or greater than 8 (or not an integer at all), go back one step
-1. Iterate from 1 through height:
-    1. On iteration *i*, print *i* hashes and then a newline
+1. Prompt user for height.
+1. If height is less than 1 or greater than 8 (or not an integer at all), go back to step one.
+1. Count *n* from 1 through height:
+    1. On iteration *n*, print *n* hashes
 
 It's okay to edit your own after seeing this pseudocode here, but don't simply copy/paste this into your own!
 
@@ -122,6 +122,7 @@ OK: 4
 
 * Recall that you can print an `int` with `print()`.
 * Recall that you can convert the user's input with `int()`.
+* Don't forget to check for when the user enters a non-number, like "hi". Remember `try...except`?
 
 {% endspoiler %}
 
@@ -150,8 +151,8 @@ Modify `mario.py` at right such that it no longer simply prints the user's input
 
 * Keep in mind that a hash is just a character like any other, so you can print it with `print()`.
 * In Python we have a `for` loop, via which you can iterate some number times. Perhaps on each iteration, *i*, you could print that many hashes?
-* You can actually "nest" loops, iterating with one variable (e.g., `i`) in the "outer" loop and another (e.g., `j`) in the "inner" loop. For instance, here's how you might print a square of height and width `n`, below. Of course, it's not a square that you want to print for this problem!
 * When you print something, Python automatically adds a newline at the end (as if you'd hit "Enter"). If you don't want this, you can tell `print()` to use a different "end". Example `print("#", end="")` would print nothing after.
+* You can actually "nest" loops, iterating with one variable (e.g., `i`) in the "outer" loop and another (e.g., `j`) in the "inner" loop. For instance, here's how you might print a square of height and width `n`, below. Of course, it's not a square that you want to print for this problem!
 
 ```
 for i in range(n):
