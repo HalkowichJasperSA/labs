@@ -17,9 +17,9 @@ One place where DNA tends to have high genetic diversity is in Short Tandem Repe
 
 ![STR examples](strs.png)
 
-Using multiple STRs, rather than just one, can improve the accuracy of DNA profiling. If the probability that two people have the same number of repeats for a single STR is 5%, and the analyst looks at 10 different STRs, then the probability that two DNA samples match purely by chance is about 1 in 1 quadrillion (assuming all STRs are independent of each other). So if two DNA samples match in the number of repeats for each of the STRs, the analyst can be pretty confident they came from the same person. CODIS, The FBI’s DNA database, uses 20 different STRs as part of its DNA profiling process.
+Using multiple STRs, rather than just one, can improve the accuracy of DNA profiling. If the probability that two people have the same number of repeats for a single STR is 5%, and the analyst looks at 10 different STRs, then the probability that two DNA samples match purely by chance is about 1 in 1 quadrillion. So if two DNA samples match in the number of repeats for each of the STRs, the analyst can be pretty confident they came from the same person. CODIS, the FBI’s DNA database, uses 20 different STRs as part of its DNA profiling process.
 
-What might such a DNA database look like? Well, in its simplest form, you could imagine formatting a DNA database as a CSV file, wherein each row corresponds to an individual, and each column corresponds to a particular STR.
+What might such a DNA database look like? Well, in its simplest form, you could see a DNA database as a CSV file, with each row corresponding to an individual, and each column corresponding to a particular STR.
 
 ```
 name,AGAT,AATG,TATC
@@ -28,26 +28,24 @@ Bob,17,22,19
 Charlie,36,18,25
 ```
 
-The data in the above file would suggest that Alice has the sequence AGAT repeated 28 times consecutively somewhere in her DNA, the sequence AATG repeated 42 times, and TATC repeated 14 times. Bob, meanwhile, has those same three STRs repeated 17 times, 22 times, and 19 times, respectively. And Charlie has those same three STRs repeated 36, 18, and 25 times, respectively.
+The data in the above file would suggest that Alice has the sequence AGAT repeated 28 times consecutively somewhere in her DNA, the sequence AATG repeated 42 times, and TATC repeated 14 times. Bob, meanwhile, has those same three STRs repeated 17 times, 22 times, and 19 times. And Charlie has those same three STRs repeated 36, 18, and 25 times.
 
 So given a sequence of DNA, how might you identify to whom it belongs? Well, imagine that you looked through the DNA sequence for the longest consecutive sequence of repeated AGATs and found that the longest sequence was 17 repeats long. If you then found that the longest sequence of AATG is 22 repeats long, and the longest sequence of TATC is 19 repeats long, that would provide pretty good evidence that the DNA was Bob’s. Of course, it’s also possible that once you take the counts for each of the STRs, it doesn’t match anyone in your DNA database, in which case you have no match.
 
-In practice, since analysts know on which chromosome and at which location in the DNA an STR will be found, they can localize their search to just a narrow section of DNA. But we’ll ignore that detail for this problem.
-
 Your task is to write a program that will take a sequence of DNA and a CSV file containing STR counts for a list of individuals and then output to whom the DNA (most likely) belongs.
 
-## Gettings started
+## Getting started
 
-In a file called `dna.py`, implement a program that identifies to whom a sequence of DNA belongs.
+In `dna.py`, write a program that identifies to whom a sequence of DNA belongs.
 
 * The program should require as its first command-line argument the name of a CSV file containing the STR counts for a list of individuals.
 * The program should require as its second command-line argument the name of a text file containing the DNA sequence to identify.
-  * program is executed with the incorrect number of command-line arguments, your program should print an error message of your choice.
+  * If your program is executed with the incorrect number of command-line arguments, it should print an error message of your choice.
 * Your program should open the CSV file and read its contents into memory.
 * Your program should open the DNA sequence and read its contents into memory.
 * For each of the STRs, your program should compute the longest run of consecutive repeats of the STR in the DNA sequence to identify.
 * If the STR counts match exactly with any of the individuals in the CSV file, the program should print out the name of the matching individual.
-* If there is no match, the program should print `No match.`.
+* If there is no match, the program should print `No match.`
 
 ## Hints
 

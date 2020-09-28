@@ -1,6 +1,6 @@
 lab50:
   files:
     - !exclude "*"
-    - !include dna.py
     - !include databases/
     - !include sequences/
+    - !include dna.py
