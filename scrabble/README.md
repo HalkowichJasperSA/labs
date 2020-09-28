@@ -23,27 +23,35 @@ For example, if we wanted to score the word `Code`, we would note that in genera
 
 Finish `scrabble.py` at right, so that it determines the winner of a short scrabble-like game, where two players each enter their word, and the higher scoring player wins.
 
-* Notice that we've stored the point values of each letter of the alphabet in a list named `POINTS`.
+* You've been provided the point values of each letter of the alphabet in a list named `POINTS`.
+
   * For example, `A` or `a` is worth 1 point (represented by `POINTS[0]`), `B` or `b` is worth 3 points (represented by `POINTS[1]`), etc.
-* Notice that we've created a function called `score()` that takes a string as input and returns an `int`. Whenever we would like to assign point values to a particular word, we can call this function.
+
+* You have a function called `score()` that takes a string as input and returns an `int`. Whenever you want to assign point values to a particular word, you can call this function.
+
 * The program prompts the two players for their words using the `input()` function. These values are stored inside variables named `p1` and `p2`.
+
 * In `score()`, your program should use the `POINTS` array to compute and return the score for the string argument. Characters that are not letters should be given zero points, and uppercase and lowercase letters should be given the same point values.
-  * For example, `!` is worth `0` points while `A` and `a` are both worth `1` point.
+
+  * For example, `!` or `3` are worth `0` points while `A` and `a` are both worth `1` point.
+
 * Finally, your program should print, depending on the players' scores, `"Player 1 Wins!"`, `"Player 2 Wins!"`, or `"Tie!"`.
 
 ### Hints
 
-* You may find the string function `.lower()` to be helpful.
+* You may find the string function `lower()` to be helpful.
 
-* To find the value at the `n`th index of a list called `arr`, you can write `arr[n]`. You can apply this to strings as well, as strings are lists of characters.
+* You can find if a character is a letter of the alphabet using `isalpha()`. For example, `"a".isalpha()` would return `True`.
 
 * Recall that computers represent characters using [ASCII](http://asciitable.com/), a standard that represents each character as a number. You can find the ASCII value of a character using `ord()`. For example, `ord("a")` would return `97`.
 
-* `a` in ASCII is `97` and the value for `a` in the score list can be found at `POINTS[0]`. `b` is `98` and its score is `POINTS[1]`. And so on. Is there a way you can convert from a letter's ASCII value to its point value?
+* `a` in ASCII is `97` and the value for `a` in the score list can be found at `POINTS[0]`. `b` is `98` and its score is `POINTS[1]`. And so on. Is there a way you can convert from a letter's ASCII value to its position in the `POINTS` list?
+
+* Printing out the scores is a good way to check if your program is working correctly. You can remove the `print()` statements when you're done.
 
 ### How to Test Your Code
 
-Your program should behave per the examples below.
+Your program should behave as the examples below.
 
 ```
 $ python scrabble.py
