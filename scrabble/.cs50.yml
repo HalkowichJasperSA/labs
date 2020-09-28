@@ -4,7 +4,7 @@ lab50:
     - !include scrabble.py
 
 check50:
-  files:
+  files: &check50_files
     - !exclude "*"
     - !include scrabble.py
 
