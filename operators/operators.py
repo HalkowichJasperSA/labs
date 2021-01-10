@@ -1,7 +1,6 @@
-from cs50 import *
 
-# declare an int variable a and get user input
-a = get_int("Enter a whole number: ")
+# get user input and convert to integer
+a = int(input("Enter a whole number: "))
 
 # make a variable "b" and assign it the value of a plus 3
 

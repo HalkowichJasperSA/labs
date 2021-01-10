@@ -59,23 +59,19 @@ age = age + 1
 
 So you've seen how you can code values into a variable by typing them into your program, but what if you want a use a different value for a variable each time you run it?
 
-In this case you can use CS50's user input functions, to prompt for a value in the terminal.
+In this case you can use Python's `input()` function to prompt for a value in the terminal.
 
-There are several CS50 user input functions, depending on the type of data (data type) that you want your variable to hold. Since `age` is an int, you could use `get_int()` to prompt for a value like this:
+**IMPORTANT:**
+
+There are many things a user could type, so by default anything captured with `input()` is represented as a **string**.
+
+Since `age` needs to be an int, you can use `int()` to convert the value like this:
 
 ```python
-age = get_int("Enter Your Age: ")
+age = int( input("Enter Your Age: ") )
 ```
 
-The function `get_int()` takes an argument, which is the text that you want to prompt the user with. Note that the prompt is wrapped inside of double quotes, `"` since it is a string, and the argument is inside of parentheses `(` and `)`.
-
-To use the CS50 user input functions, you need to include the CS50 library by typing in:
-
-```
-from cs50 import get_int
-```
-
-at the top of your program.
+The function `input()` takes an argument, which is the text that you want to prompt the user with.
 
 {% next %}
 
@@ -85,7 +81,7 @@ Though the program on the right is correct and will execute properly, it is not 
 
 So your job is to edit the code provided, to use one or more variables, along with user input.
 
-To start, use `get_int()` to get a value from the user and assign it to a variable called `age`.
+To start, use `input()` to get an integer value from the user and assign it to a variable called `age`.
 
 Now replace every occurrence of `17` with `age`, so that the program uses the variable rather than the hardcoded number for each calculation.
 

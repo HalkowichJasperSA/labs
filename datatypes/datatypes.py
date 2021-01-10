@@ -1,12 +1,12 @@
-from cs50 import *
-
-# get input with get_string() and assign to a variable called "name"
-name = get_string("Name: ")
-
-# get user input with get_int() and assign to a variable called "age"
 
 
-# Use get_float() to get a number with a decimal, assign it to "gpa"
+# get string input and assign to a variable called "name"
+name = input("Name: ")
+
+# get int input and assign to a variable called "age"
+
+
+# get float (decimal) input and assign it to "gpa"
 
 
 # prints a blank line followed by each input value

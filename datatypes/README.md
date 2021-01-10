@@ -22,10 +22,10 @@ Let's start with the data types used most frequently.
 
 An `int` is a data type which represents an **integer**: its value could be a positive or negative whole number, or zero. Numbers like 5, 28, -3, and 0 can be represented as ints, but numbers like 2.8, 5.124, and -8.6 cannot.
 
-The CS50 user input function for an `int` is `get_int()`. To declare a new int and ask for input we could write:
+Recall that whenever you ask for user input with `input()`, the result is a string. To convert that input to an integer, you can write:
 
 ```python
-age = get_int("Enter your age: )
+age = int(input("Enter your age: "))
 ```
 
 {% next %}
@@ -34,12 +34,12 @@ age = get_int("Enter your age: )
 
 To store numbers that are not whole numbers, Python uses a data type known as a `float`, for **floating-point** number. A float stores negative and positive numbers that contain decimals, such as 5.12 or -17.32.
 
-Since there are an infinite number of numbers with decimals, and the computer has a finite number of bits, the computer cannot represent every floating point number with 100% accuracy. A `float` only has about six digits of precision. This can be a problem when more accuracy is needed. This problem is called **floating-point imprecision**.
+Since there are an infinite number of numbers with decimals, and the computer has a finite number of bits, the computer cannot represent every floating point number with 100% accuracy. This can be a problem when more accuracy is needed. This problem is called **floating-point imprecision**.
 
-Example input with `get_float()` could look like:
+Example of inputting a float:
 
 ```python
-change = get_float("Enter dollars and cents: ")
+change = float(input("Enter dollars and cents: "))
 ```
 
 {% next %}
@@ -54,10 +54,10 @@ Strings in Python must be surrounded by quotes, either double (`"`), or single (
 name = "Zelda"
 ```
 
-To have a user input string data, we can use the `get_string()` function as in:
+To have a user input string data, you don't need to convert anything at all:
 
 ```python
-name = get_string("Enter your name: ")
+name = input("Enter your name: ")
 ```
 
 ### bool

@@ -17,7 +17,7 @@ On the bottom of your window on the right is a **terminal** panel, which is a te
 
 ## Exploring your workspace
 
-Before you start, you may notice three text files open in the code/text editor on the upper right side of your screen. These files are located somewhere in your workspace, but they may not stored in the appropriate directories. We'll take a closer look at these later.
+Before you start, you may notice three text files open in the code/text editor on the upper right side of your screen. These files are located somewhere in your workspace, but they may not be stored in the appropriate directories. We'll take a closer look at these later.
 
 Under the tab that says `>_ Terminal`, is a window with a `$` prompt. This is the terminal window where you can type commands.
 
