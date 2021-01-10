@@ -6,53 +6,28 @@ In this lab you will learn:
 
 - What syntax is
 - When to use parentheses and double quotes
-- Why we use curly braces and semicolons
-- The syntax needed to create a program in C
+- When and why to use indentation
+- The syntax needed to create a program in Python
 
 ## What is Syntax?
 
-In linguistics, syntax is the set of rules for using words, phrases and punctuation to form sentences. As you can see above, if the word order of a sentence is incorrect, you might not understand what is being said to you.
+In linguistics, *syntax* is the set of rules for using words, phrases, and punctuation to form sentences. As you can see above, if the word order of a sentence is incorrect, you might not understand what is being said to you.
 
 {% next %}
 
-## Syntax in C
+## Syntax in Python
 
-In Computer Science, **syntax** is also important for a computer to understand what you are telling it to do. Each programming language has its own syntactical rules, which include the combination of both words and punctuation.
+In computer science, **syntax** is also important for a computer to understand what you are telling it to do. Each programming language has its own syntactical rules, which include the combination of both words and punctuation.
 
-For instance, to say "hello" in C, we would write:
+For instance, to say "hello" in Python, we would write:
 
-```c
-printf("hello,  world\n");
+```python
+print("hello,  world")
 ```
 
-The `printf` function in C, is the equivalent to the `say` block in Scratch. Note that our `printf` function takes an **argument**, or parameter, which is wrapped in symmetrical parentheses, `(` and `)`.
+Note that the `print` function takes an **argument**, or parameter, which is wrapped in symmetrical parentheses: `(` and `)`. Parentheses *always* come in pairs - every left one must have a matching right!
 
-You may also notice the double quotes `"`, which are also symmetrical, and which surround words, or sequences of characters. We'll start calling these sequences of characters `strings`.
-
-And finally, the entire line ends with a semicolon, `;`. A semicolon is used at the end of every statement, like a period at the end of a sentence.
-
-{% next %}
-
-## Creating a Program
-
-Just like how we need the `when green flag` clicked block in Scratch to start our program, our C program won’t run unless we write a few lines to set it up.
-
-```c
-#include <stdio.h>
-
-int main(void)
-{
-    printf("hello, world\n");
-}
-```
-
-Notice the `int main(void)` line, which is the standard name in C of a default function which is required for the program to run. When you execute a C program, the `main` function will automatically run.
-
-Don't worry yet about the terms `int` and `void`! We'll be learning more about those later on.
-
-The curly braces `{` and `}` are symbols you'll see frequently in C. They are used here to wrap the code that we want to execute in functions like `main`. You'll soon see curly braces used with loops, to indicate which segments of code to repeat; with conditional statements to tell the computer which block to to run for each of the conditions if they are true, and with other programing constructs as well.
-
-The line `#include <stdio.h>` may not be obvious at first. The term `include` is a keyword that indicates we want to include some other file in our program, and it must be preceded by the symbol `#`. The **library**,`stdio.h`, contains (and we only know from searching online and looking at [documentation](https://man.cs50.io/). the standard input/output library, which means that it deals with input (like from the keyboard) and output (printing characters to the screen). In fact, it contains the code of `printf()` that we are using. There is no equivalent in Scratch, since by default the functions are already defined and created for us.
+You may also notice the double quotes `"`, which are also symmetrical, and which surround words or sequences of characters. We call these sequences of characters `strings`.
 
 {% next %}
 
@@ -83,7 +58,7 @@ Then execute your program, by typing in the following, again followed with `ente
 ```
 
 <style type="text/css">
-#green {color:green;}  
+#green {color:green;}
 </style>
 
 ### Styling with `style50`

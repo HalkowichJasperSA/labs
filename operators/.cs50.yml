@@ -1,4 +1,4 @@
 lab50:
   files:
     - !exclude "*"
-    - !include operators.c
+    - !include operators.py

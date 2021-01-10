@@ -1,4 +1,4 @@
-import cs50
+from cs50 import get_int
 
 # Let's assume my age is 17
 print(f"Right now I'm {17} years old.")

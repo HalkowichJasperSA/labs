@@ -72,7 +72,7 @@ The function `get_int()` takes an argument, which is the text that you want to p
 To use the CS50 user input functions, you need to include the CS50 library by typing in:
 
 ```
-import cs50
+from cs50 import get_int
 ```
 
 at the top of your program.
@@ -137,11 +137,29 @@ This time you'll see your program do the calculation correctly, but how can some
 
 Eventually you'll see how to validate user inputs, but for now, your goal is to practice using variables, and to write code that is syntactically correct, which will compile and execute.
 
-### Style
+### How to Check Your Code
 
-Since it's good to develop good habits early, check that your indentation and spacing is correct by typing:
+Once you've tested the program yourself, execute the below to evaluate the correctness of your code using `check50`. But be sure to always test it yourself as well!
+
+```
+check50 scienceacademy/problems/2021/7/variables
+```
+
+Execute the below to evaluate the style of your code using `style50`.
 
 ```
 style50 variables.py
 ```
+
+{% next %}
+
+## How to Submit
+
+Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
+
+```
+submit50 scienceacademy/problems/2021/7/variables
+```
+
+
 
