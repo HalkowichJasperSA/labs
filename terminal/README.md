@@ -21,7 +21,7 @@ Before you start, you may notice three text files open in the code/text editor o
 
 Under the tab that says `>_ Terminal`, is a window with a `$` prompt. This is the terminal window where you can type commands.
 
-Let's start by exploring your workspace. Your workspace contains *folders*, aka *directories* (the terms are interchangeable) and files. Directories can be nested inside other directories, just as you might have folders stored in other folders on your computer.
+Let's start by exploring your workspace. Your workspace contains *folders*, aka *directories* (two words for the same thing) and files. Directories can be nested inside other directories, just as you might have folders stored in other folders on your computer.
 
 ## The `ls` and `cd` terminal commands
 
