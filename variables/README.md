@@ -109,19 +109,7 @@ What happens if you enter a name instead of your age, when you get the prompt? A
 
 ```
 Enter Your Age: Brian
-Enter Your Age:
 ```
-
-Does the program come back and ask again? It should do this because `get_int()` only accepts integers.
-
-Or if you enter a number with a decimal point:
-
-```
-Enter Your Age: 17.5
-Enter Your Age:
-```
-
-The program again comes back and reprompts.
 
 What if you enter a negative number? At the prompt, try entering:
 

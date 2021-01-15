@@ -1,0 +1,7 @@
+lab50:
+  files:
+    - !exclude "*"
+    - !include p1.py
+    - !include p2.py
+    - !include p3.py
+    - !include p4.py

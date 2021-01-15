@@ -36,7 +36,7 @@ a = a * 3
 
 {% next %}
 
-# Modulo
+## Modulo
 
 An operator in most programming languages that you may not have seen before is the remainder, or **modulo** operator. The symbol used by modulo is the `%` sign, and an operation using modulo looks like this:
 
@@ -48,8 +48,6 @@ Since 2 goes into 5 twice with a remainder of one, the result is 1.
 
 Though it may not be obvious at first, this operator can be very useful in programming. It can tell you if a value is divisible by a number, and as we'll see later can be used as a "wrap around" operator, where numbers wrap around back to zero after reaching a certain value.
 
-Modulo can only be used with `int`s.
-
 {% next %}
 
 ## Assignment Operators
@@ -60,19 +58,20 @@ There are a few shortcuts for assignment that you'll soon encounter as well.
 
 | Symbol     | Example      | Result |
 | ------------- |------------------| ------- |
-| `+=`           | `a += 2`           | sets `a` to 2 plus the initial value of `a`|
-| `-=`           | `a -= 2`           | sets `a` to 2 minus the initial value of `a`|
-| `*=`          | `a *= 2`            | sets `a` to 2 times the initial value of `a`|
-| `\=`          | `a \= 2`            | sets `a` to 2 divided by the initial value of `a`|
+| `+=`           | `a += 2`           | sets `a` to 2 plus the current value of `a`|
+| `-=`           | `a -= 2`           | sets `a` to 2 minus the current value of `a`|
+| `*=`          | `a *= 2`            | sets `a` to 2 times the value current of `a`|
+| `\=`          | `a \= 2`            | sets `a` to 2 divided by the current value of `a`|
 
 
 {% next %}
 
 ## Your turn!
 
-The program on the right is partially completed. It asks for user input and assigns it to an int variable a. Your job is to declare additional variables, as per the comments, and use the appropriate operator to assign it the proper value.
+The program on the right is partially completed. It asks for user input and assigns it to an `int` variable `a`. Your job is to declare more variables, as directed by the comments, and use the appropriate operator to assign the proper value.
 
 Execute your code by typing this command in the terminal:
+
 ```
 python operators.py
 ```
