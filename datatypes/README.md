@@ -62,7 +62,7 @@ name = input("Enter your name: ")
 
 ### bool
 
-A `bool` is a *boolean value**: a data type that stores one of only two possible values: **True** or **False**. We use bools to control the flow of our code.
+A `bool` is a *boolean value*: a data type that stores one of only two possible values: **True** or **False**. We use bools to control the flow of our code.
 
 For instance:
 
