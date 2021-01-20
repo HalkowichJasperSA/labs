@@ -61,7 +61,7 @@ There are a few shortcuts for assignment that you'll soon encounter as well.
 | `+=`           | `a += 2`           | sets `a` to 2 plus the current value of `a`|
 | `-=`           | `a -= 2`           | sets `a` to 2 minus the current value of `a`|
 | `*=`          | `a *= 2`            | sets `a` to 2 times the value current of `a`|
-| `\=`          | `a \= 2`            | sets `a` to 2 divided by the current value of `a`|
+| `/=`          | `a /= 2`            | sets `a` to 2 divided by the current value of `a`|
 
 
 {% next %}

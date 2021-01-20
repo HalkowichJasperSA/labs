@@ -64,11 +64,11 @@ for i in range(10, 0, -1):
 
 ## Your Turn
 
-Modify the code on the right to add up the numbers from 1 to 10, using either the supplied for loop or creating your own. Store the total in the variable named `total`.
+Change the code on the right to add up the numbers from 1 to 10, using either the supplied for loop or creating your own. Store the total in a variable named `total`.
 
 {% spoiler "Hint" %}
 
-* Remember, you can set a new variable using `=`:
+* Remember, you can set a new variable using `=`, like this:
 
 ```
 total = 0
