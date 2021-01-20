@@ -2,55 +2,63 @@
 
 In this lab you will learn:
 
-- Why we have a for loop
+- What is a for loop
 - How to use a for loop
 
 ## What is a For Loop?
 
-The **for loop** is probably the most frequently used loop of the three types of loops. It is very useful when we want to repeat something a known number of times.
+The **for loop** is probably the most frequently used loop of the two types of loops. It is very useful when you want to repeat something a *known number of times*.
 
-Eventually we'll see how for loops can be useful for:
+You'll see how for loops can be useful for:
 * Repeating a block of code 10 or 20 or *n* times when you know in advance the value of *n*
 * Accessing each individual character in a string
-* Looking at each element in an array (more on this to come later!)
+* Looking at each element in an list (more on this to come later!)
 
-Let's start by taking a look at the analogous loop in Scratch.
+Let's start by taking a look at an example:
 
-{% next %}
-
-![scratch_repeat](https://raw.githubusercontent.com/cs50nestm/cs50labs/2019/forloop/repeat.png)
-
-can be recreated in C by:
-
-```c
-for (int i = 0; i < 50; i++)
-{
-    printf("hello, world\n");
-}
+```python
+for i in range(10):
+    print("hello, world")
 ```
 
-A for loop has three parts (included in parentheses after the word for, and separated by semicolons)
+A for loop has three parts (which come after the word `for`):
 
-* **Initialization**: `int i = 0` is an initialization of the `int` variable `i`, which means that we created a variable and set its initial value to 0. `i` is a conventional name for a counting variable that keeps track of how many iterations of the loop we’ve already done.
+* **Loop variable**: This variable keeps track of how many iterations the loop has already done. `i` is a common name for a counting variable.
 
-* **Loop Condition**:  Then `i < 50` is the Boolean expression that the for loop checks, to determine if it will continue or not. When this condition is true, the for loop will run the code inside the curly braces. And since we started `i` at 0, stopping before `i` reaches 50 will mean this runs exactly 50 times, as we intended.
+* **Loop sequence**: Next comes a sequence of values that the loop variable will get. `range()` is one way of making this sequence. `range(10)` means "make a list of the numbers up to 10". This is how many times the loop will repeat.
 
-* **Increment Statement**:  The third part is the loop modification. This code is executed at the end of every loop. In this case, we increase the value of `i` by 1. As soon as `i` is no longer less than 50, the condition fails and the loop will end. The end result is that `hello world\n` is displayed exactly 50 times.
+* **Loop block**: This is the code that comes after the `:` (note that it is indented). This is one or more statements that will be executed every time the loop repeats.
 
 {% next %}
 
-By taking advantage of loop modification, you can also get a loop to do something slightly different each time the loop repeats, or iterates.
+By using the loop variable, you can also get a loop to do something slightly different each time the loop repeats, or iterates.
 
 For example, let's look at the following code:
 
-```c
-for (int j = 1; j <= 10; j++)
-{
-    printf("%i\n", j);
-}
+```python
+for i in range(10):
+    print(i)
 ```
 
-Here we start our counting variable, `j`, at 1 and execute the loop until `j` is no longer less than or equal to 10. Our first execution of the loop prints 1 on its own line. We then increment `j` by 1 and check the condition to see if it's still true. Since `j` is now 2, it's true that `2 <= 10` so the loop repeats printing 2 on it's own line. This continues until we've printed out the count from 1 to 10 inclusive.
+`range(10)` produces a list of the numbers up to 10 (`[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]`) and the for loop sets `i` to each one of them, one at a time. Therefore, when you run this code, it will print all of the numbers from 0 through 9.
+
+{% next %}
+
+## Other things you can do with `range()`
+
+You can also give additional *parameters* to `range()` to choose the start, end, and step values of the numbers. For example, to count by threes:
+
+```python
+for i in range(0, 21, 3):
+    print(i)
+```
+
+Or to count backwards from 10 down to 1:
+
+```python
+for i in range(10, 0, -1):
+    print(i)
+```
 
 {% next %}
 
@@ -60,8 +68,49 @@ Modify the code on the right to add up the numbers from 1 to 10, using either th
 
 {% spoiler "Hint" %}
 
-Keep in mind that you can use the value of `i` in your calculation. You can also change the loop so start at one and end when `i <= 10`. This gives you a value which can be added to `total` during each iteration.
+* Remember, you can set a new variable using `=`:
+
+```
+total = 0
+```
+
+* You can use the value of `i` in your calculation.
+
+```
+total = total + i
+```
+
+* Don't forget to print out your result at the end:
+
+```
+print(total)
+```
 
 {% endspoiler %}
 
-[For more info, download the CS50 Loops Reference Sheet](https://cs50.harvard.edu/ap/2020/assets/pdfs/loops.pdf)
+{% next %}
+
+### How to Check Your Code
+
+Once you've tested the program yourself, execute the below to evaluate the correctness of your code using `check50`. But be sure to always test it yourself as well!
+
+```
+check50 scienceacademy/problems/2021/7/forloop
+```
+
+Execute the below to evaluate the style of your code using `style50`.
+
+```
+style50 forloop.py
+```
+
+{% next %}
+
+## How to Submit
+
+Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
+
+```
+submit50 scienceacademy/problems/2021/7/forloop
+```
+
