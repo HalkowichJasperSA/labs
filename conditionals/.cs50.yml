@@ -2,3 +2,4 @@ lab50:
   files:
     - !exclude "*"
     - !include grades.py
+    - !include odd_even.py

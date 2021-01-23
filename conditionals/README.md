@@ -70,7 +70,11 @@ if age > 12 and age < 20:
     print("You are officially a teenager!")
 ```
 
-## Your Turn!
+{% next %}
+
+## Grades
+
+You have two problems to solve in this lab. First, let's look at `grades.py`.
 
 If you try to run the code in `grades.py` on the right, you'll see there's a problem. If the user inputs `95`, all four statements print out!
 
@@ -81,14 +85,37 @@ You got an A!
 You got a B!
 You got a C!
 You got a D!
+```
 
 Fix the program so that only the correct statement prints out.
 
 Make sure to test your code by entering a variety of numbers between 60 and 100.
 
+{% next %}
+
+## Even or odd
+
+Now look at `odd_even.py`. This program asks the user to input a number.
+
+Your task is to print "Odd" or "Even" depending on the number that was entered. When you run the program, it should look like this:
+
+```
+$ python odd_even.py
+Enter a number: 7
+Odd
+
+$ python odd_even.py
+Enter a number: 6
+Even
+```
+
+Don't forget to test your code and make sure it outputs the right response!
+
+{% next %}
+
 ### How to Check Your Code
 
-Once you've tested the program yourself, execute the below to evaluate the correctness of your code using `check50`. But be sure to always test it yourself as well!
+Once you've tested the programs yourself, execute the below to evaluate the correctness of your code using `check50`. But be sure to always test it yourself as well!
 
 ```
 check50 scienceacademy/problems/2021/7/conditionals
@@ -98,6 +125,12 @@ Execute the below to evaluate the style of your code using `style50`.
 
 ```
 style50 grades.py
+```
+
+and
+
+```
+style50 odd_even.py
 ```
 
 {% next %}
