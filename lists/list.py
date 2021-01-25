@@ -1,6 +1,3 @@
-num_days = 5
-hours = []
+numbers = [2, 7, 4, 5, 9]
 
-# write a for loop to prompt for the number of hours for each day
-
-# write another for loop to print out the number of hours for each day
+# write a for loop to change each number in the list into its square

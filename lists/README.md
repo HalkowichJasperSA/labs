@@ -19,6 +19,8 @@ student3 = 93
 
 You can see pretty quickly that it's going to get very boring typing in so much repetitive code!
 
+{% next %}
+
 Instead, you can use a list, named `students` that can store many values:
 
 ```python
@@ -26,8 +28,6 @@ students = []
 ```
 
 The square brackets `[]` indicate a list. Right now it's empty, but we can fill it up using a loop.
-
-{% next %}
 
 You can add values to `students` by using `append()` - **append** means "add on to the end". Since you've already assigned the list, you just need a loop to ask for the 30 grades:
 
@@ -43,74 +43,148 @@ At the end of this loop, `students` will have 30 grades in it!
 
 Individual
 
-Lists are **zero-indexed**, meaning the first item in the list always has an index of zero.
+An item's position in the list is called its **index**. Lists are **zero-indexed**, meaning the first item in the list always has an index of zero.
+
+For example, imagine you have the following list:
+
+```python
+colors = ["red", "green", "blue", "orange", "yellow"]
+```
+
+`"red"` would be at index `0`, `"blue"` at index `2`, and so on. You can access an individual item from a list using its index:
+
+```python
+print(colors[1])  # This would print "green"
+
+colors[4] = "purple"  # This would change the last item to "purple"
+```
+
+Since the index is a number, and we can find how long a list is with `len()`, we could loop through every item in the list like this:
+
+```python
+for i in range(len(colors)):
+    print(colors[i])
+```
 
 This is called **iterating** through a list.
+
+However, in Python, there's a much easier way to loop through a list:
+
+```python
+for item in colors:
+    print(item)
+```
+
+Rather than using the index and counting your way through, you can loop through the items in the list directly.
 
 {% next %}
 
 ## Strings
 
-Arrays in C can store values of any data type, as long as all elements in the array are of the same type. In fact, a **string** in C is really an array of `chars`.
+Recall in the "data types" lab you learned about the **string** type.
 
-When we declare a string in C as in:
-
-```c
-string course = "CS50";
+```python
+name = "Wanda"
 ```
 
-we are creating an array named `course` with one character at each index. There is one additional character at the end of every string in C: the null-terminator, represented by `'\0'`. The null-terminator is the character that tells a string that the string is over, and that there are no more characters in the string. So this array will have five spots for chars, indexed 0 through 4.
+In Python, strings can be used in many of the same ways as lists:
 
-We can index into this string in the same way we index into any array, using square bracket notation. So `course[0]` has a value of `'C'`, `course[1]` a value of `'S'`, ending with `course[4]` having a value of `'\0'`. Even though `'\0'` looks like two characters, our program see it as one `char`.
+```python
+len(name)  # Finds how long the name is.
 
-Since a string is an array, we can iterate through a string using a for loop as well. There is a special function `strlen()` we can use which gives us the length of a string. To use this function, we need to write `#include <string.h>` at the top of our program to access the `string.h` library.
+# This prints each letter in the name one at a time.
+for char in name:
+    print(char)
 
-Our for loop to access each character of our string, one `char` at a time would look like:
-
-```c
-for (int i = 0; i < strlen(course); i++)
-{
-    printf("%c\n", course[i]);
-}
+print(char[3])  # This prints "d"
 ```
 
-Here we print out each letter stored in the string variable `course` on its own line.
+However, one difference is that strings are **immutable**, which means they can't be altered. While you can assign a value to a list index, you can't do it with a string:
+
+```python
+name = "Wanda"
+colors = ["red", "green", "blue", "orange", "yellow"]
+
+colors[2] = "pink"  # This is OK
+name[4] = "o"  # This will produce an error
 
 {% next %}
 
 ## Your Turn!
 
-To the right are two programs you will complete. First, you'll modify `string.c` to include a for loop that iterates through the string `name` and print out one character per line.
+To the right are two programs you will complete.
 
-Then complete the program `array.c` which creates a new integer array named `hours`, in which you will input the number of hours you spent on homework each day for the last 5 days, and then print out the hours for each day. Your output should look like:
+In `list.py`, write a `for` loop that iterates through the `numbers` list and changes each number to its square, then prints the result.
 
 ```
-Day 1: <day 1 hours>
-Day 2: <day 2 hours>
+$ python list.py
+[4, 49, 16, 25, 81]
 ```
-
-and so on, where `<day 1 hours>` is replaced with the number you input for day 1.
 
 {% spoiler "Hint" %}
-You can use a for loop like this to prompt for the number of hours for each of the 5 days:
+Remember that you can loop through a list's indices like this:
 
-```c
-for (int i = 0; i < NUM_DAYS; i++)
-{
-    // prompt for hours using `get_int()` and store the result in `hours[i]`
-}
+```python
+# change every item in the list to a 0
+for i in range(len(numbers)):
+    some_list[i] = 0
 ```
-
-Then use the same for loop a second time to iterate through these values and print them. Inside this second loop you will have something like:
-
-```c
-printf("Day %i: %i", i + 1, hours[i]);
-```
-
-Why do you think we're printing the value `i + 1` for the day?
 
 {% endspoiler %}
 
-Make sure to compile and test both programs!
+{% next %}
 
-[Download our CS50 Reference sheet on Arrays and Strings](https://cs50.harvard.edu/ap/2020/assets/pdfs/arrays_and_strings.pdf)
+In `string.py`, you need to take the given name and count how many vowels occur in the name. Print the number (just the number, nothing extra).
+
+Example of running the program:
+
+```
+$python string.py
+Enter your name: Luigi
+3
+```
+
+{% spoiler "Hint" %}
+
+* Remember the "forloop" lab, where you added the numbers from one to 10. You'll need to do something very similar here to count how many vowels you see.
+
+* Remember that you can loop through a string one letter at a time using:
+
+```python
+for char in name:
+    print(char)
+```
+
+{% endspoiler %}
+
+{% next %}
+
+### How to Check Your Code
+
+Once you've tested the programs yourself, execute the below to evaluate the correctness of your code using `check50`. But be sure to always test it yourself as well!
+
+```
+check50 scienceacademy/problems/2021/7/lists
+```
+
+Execute the below to evaluate the style of your code using `style50`.
+
+```
+style50 lists.py
+```
+
+and
+
+```
+style50 string.py
+```
+
+{% next %}
+
+## How to Submit
+
+Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
+
+```
+submit50 scienceacademy/problems/2021/7/lists
+```
