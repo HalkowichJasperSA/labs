@@ -41,14 +41,14 @@ At the end of this loop, `students` will have 30 grades in it!
 
 {% next %}
 
-Individual
+Lists can store many pieces of information, but individual pieces can also still be used.
 
 An item's position in the list is called its **index**. Lists are **zero-indexed**, meaning the first item in the list always has an index of zero.
 
 For example, imagine you have the following list:
 
 ```python
-colors = ["red", "green", "blue", "orange", "yellow"]
+colors = ["red", "green", "blue", "orange"]
 ```
 
 `"red"` would be at index `0`, `"blue"` at index `2`, and so on. You can access an individual item from a list using its index:
@@ -56,10 +56,10 @@ colors = ["red", "green", "blue", "orange", "yellow"]
 ```python
 print(colors[1])  # This would print "green"
 
-colors[4] = "purple"  # This would change the last item to "purple"
+colors[3] = "purple"  # This would change the last item to "purple"
 ```
 
-Since the index is a number, and we can find how long a list is with `len()`, we could loop through every item in the list like this:
+Since the index is a number, and you can find how long a list is with `len()`, you could loop through every item in the list like this:
 
 ```python
 for i in range(len(colors)):
@@ -68,14 +68,14 @@ for i in range(len(colors)):
 
 This is called **iterating** through a list.
 
-However, in Python, there's a much easier way to loop through a list:
+However, in Python, there's a much easier way to loop through a list. You can get the same result with:
 
 ```python
 for item in colors:
     print(item)
 ```
 
-Rather than using the index and counting your way through, you can loop through the items in the list directly.
+As you can see, rather than using the index and counting your way through, you can loop through the items in the list directly.
 
 {% next %}
 
@@ -103,10 +103,11 @@ However, one difference is that strings are **immutable**, which means they can'
 
 ```python
 name = "Wanda"
-colors = ["red", "green", "blue", "orange", "yellow"]
+colors = ["red", "green", "blue", "orange"]
 
 colors[2] = "pink"  # This is OK
 name[4] = "o"  # This will produce an error
+```
 
 {% next %}
 
