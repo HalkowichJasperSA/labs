@@ -135,12 +135,12 @@ for i in range(len(numbers)):
 
 {% next %}
 
-In `string.py`, you need to take the given name and count how many vowels occur in the name. Print the number (just the number, nothing extra).
+In `vowels.py`, you need to take the given name and count how many vowels occur in the name. Print the number (just the number, nothing extra).
 
 Example of running the program:
 
 ```
-$python string.py
+$python vowels.py
 Enter your name: Luigi
 3
 ```
@@ -154,6 +154,14 @@ Enter your name: Luigi
 ```python
 for char in name:
     print(char)
+```
+
+* Remember that you use `==` to compare two things:
+
+```python
+char = "a"
+if char == "a":
+    print("That's an 'a'!")
 ```
 
 {% endspoiler %}
@@ -171,13 +179,13 @@ check50 scienceacademy/problems/2021/7/lists
 Execute the below to evaluate the style of your code using `style50`.
 
 ```
-style50 lists.py
+style50 list.py
 ```
 
 and
 
 ```
-style50 string.py
+style50 vowels.py
 ```
 
 {% next %}
