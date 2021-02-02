@@ -137,6 +137,8 @@ for i in range(len(numbers)):
 
 In `vowels.py`, you need to take the given name and count how many vowels occur in the name. Print the number (just the number, nothing extra).
 
+We've already included code to convert the name to lower case (so you don't have to check for both "A" and "a").
+
 Example of running the program:
 
 ```

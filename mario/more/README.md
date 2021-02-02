@@ -94,7 +94,7 @@ Does your code work as prescribed when you input
 You can also execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```
-check50 scienceacademy/problems/2020python/mario/more
+check50 scienceacademy/problems/2021/7/mario/more
 ```
 
 Execute the below to evaluate the style of your code using `style50`.
@@ -110,5 +110,5 @@ style50 mario.py
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 scienceacademy/problems/2020python/mario/more
+submit50 scienceacademy/problems/2021/7/mario/more
 ```
