@@ -1,5 +1,8 @@
 # The goal of this program is to print the product of the list of numbers.
-values = [5, 8, 1, 7, 12]
+values = []
+for i in range(5):
+    num = int(input("Enter a number: "))
+    values.append(num)
 result = 0
 for number in values:
     result *= number

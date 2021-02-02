@@ -99,15 +99,15 @@ Fix all of the errors in `p3.py`. Remember to keep running the program each time
 
 The second type of error is a bit trickier to solve. A *logic error* happens when the program works, but not as you expected. Rather than just type something the computer doesn't understand, you've told it to do something - just not what you *thought* you told it!
 
-Click on `p4.py`. The purpose of this program is to find the product of a list of numbers. It loops through the list and multiplies each number. Go ahead and run it to see the results.
+Click on `p4.py`. The purpose of this program is to find the product of a list of numbers. It asks for 5 numbers, then loops through the list and multiplies each number. Go ahead and run it to see the results.
 
-Wait a minute! `4 * 9 * 3 * 7` is not `0`. What's going on? Try and think about it before clicking the hint.
+Wait a minute! Did you get `0`? What's going on? Try and think about it before clicking the hint.
 
 {% spoiler "Hint" %}
 
 The code loops through the list of numbers, multiplying each time, but since `product` starts out as `0`, the result is `0 * 4 * 9 * 3 * 7`.
 
-Oops! `product` should be `1`...
+Oops! What should `product` be?
 
 {% endspoiler %}
 
