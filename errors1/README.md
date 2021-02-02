@@ -28,9 +28,9 @@ Here's the error you saw:
 
 ```
 Traceback (most recent call last):
-  File "p1.py", line 1, in <module>
-    Print("hello, world")
-NameError: name 'Print' is not defined
+  File "p1.py", line 2, in <module>
+    print(f"Hello, {name}")
+NameError: name 'name' is not defined
 ```
 
 This is the format of a Python error message. Let's look at it line by line:
@@ -40,13 +40,13 @@ This is the format of a Python error message. Let's look at it line by line:
 1. Third, we see the actual line of code that has the problem.
 1. Finally, the last line of the message will tell you what kind of error it was ("NameError"), and a description.
 
-So what's the problem? The last line is always the biggest clue: "name 'Print' is not defined". Can you figure out what that means and why it's a problem?
+So what's the problem? The last line is always the biggest clue: "name 'name' is not defined". Can you figure out what that means and why it's a problem?
 
 {% spoiler "Hint" %}
 
-This code is looking for a command (ie *function*) named `Print`, but there's no such thing. Computers are case-sensitive, and Python's print function is spelled `print`.
+This code is looking for a variable named `name`, but there's no such thing. In the previous line, the user's name is stored in a variable, but it's spelled `your_name`.
 
-Change the `P` to a `p` and try running again.
+In line 2, change `name` to `your_name` and try running again.
 
 {% endspoiler %}
 
@@ -54,15 +54,52 @@ Try "messing" up the code in other ways, like removing a `"` or a `)`, and see w
 
 {% next %}
 
-## Logic errors
+## TypeError
 
-The second type of error is a bit trickier to solve. A *logic error* happens when the program works, but not as you expected. Rather than just type something the computer doesn't understand, you've told it to do something - just not what you *thought* you told it!
-
-Take a look at `p2.py` on the right. The goal of this program is to multiply a list of numbers and print the product. Run the program:
+Take a look at `p2.py` on the right. The goal of this program is to get a number and add 10 to it. Run the program:
 
 ```
 python p2.py
 ```
+
+Break down the error message just like we did last time. Remember to focus on the last line:
+
+```
+Traceback (most recent call last):
+  File "p2.py", line 2, in <module>
+    print(f"Your number plus 10 is {10 + num}")
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+```
+
+Can you see what the error is telling you? Fix the code so that it works correctly.
+
+{% spoiler "Hint" %}
+
+The message is saying that the problem is with the `+` sign: having an `int` on one side and a `str` on the other side is "unsupported", meaning it's not allowed.
+
+We need to change the right-side operand (`num`) to an integer.
+
+{% endspoiler %}
+
+{% next %}
+
+## Multiple errors
+
+What happens if you have multiple errors? Take a look at `p3.py` on the right. This program is full of errors - you may even see some of them already. Before you fix anything, though, try running it.
+
+Did you notice that there was only one error message? It turns out that when Python finds an error, it just stops. It doesn't matter if there are more errors later in the program, the first error is what gets reported.
+
+This means that as you repeat the cycle of finding, fixing, and testing, you'll eventually work your way through every error in the code.
+
+Fix all of the errors in `p3.py`. Remember to keep running the program each time you change something. There are 5 things that need fixing!
+
+{% next %}
+
+## Logic errors
+
+The second type of error is a bit trickier to solve. A *logic error* happens when the program works, but not as you expected. Rather than just type something the computer doesn't understand, you've told it to do something - just not what you *thought* you told it!
+
+Click on `p4.py`. The purpose of this program is to find the product of a list of numbers. It loops through the list and multiplies each number. Go ahead and run it to see the results.
 
 Wait a minute! `4 * 9 * 3 * 7` is not `0`. What's going on? Try and think about it before clicking the hint.
 
@@ -78,12 +115,28 @@ You may have spotted this one right away, but it's a simplified example. In a bi
 
 {% next %}
 
+### How to Check Your Code
+
+Once you've tested the program yourself, execute the below to evaluate the correctness of your code using `check50`. But be sure to always test it yourself as well!
+
+```
+check50 scienceacademy/problems/2021/7/functions
+```
+
+Execute the below to evaluate the style of your code using `style50`.
+
+```
+style50 functions.py
+```
+
+{% next %}
+
 ## How to Submit
 
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 scienceacademy/problems/2021/7/variables
+submit50 scienceacademy/problems/2021/7/errors1
 ```
 
 

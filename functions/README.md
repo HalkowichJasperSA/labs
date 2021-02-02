@@ -65,8 +65,8 @@ Example of running the program:
 
 ```
 $ python functions.py
-Temp in F: 68
-Temp in C: 20
+Temp in F: 68.2
+Temp in C: 20.1
 ```
 
 {% next %}

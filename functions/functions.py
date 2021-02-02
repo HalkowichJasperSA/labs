@@ -7,6 +7,6 @@ def f_to_c(temp):
 
 
 
-t = float(input("Temp in F: "))
-print(f"Temp in C: {f_to_c(t):.1f}")
+temp = float(input("Temp in F: "))
+print(f"Temp in C: {f_to_c(temp):.1f}")
 
