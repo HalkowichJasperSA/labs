@@ -120,7 +120,7 @@ You may have spotted this one right away, but it's a simplified example. In a bi
 Once you've tested the program yourself, execute the below to evaluate the correctness of your code using `check50`. But be sure to always test it yourself as well!
 
 ```
-check50 scienceacademy/problems/2021/7/functions
+check50 scienceacademy/problems/2021/7/errors1
 ```
 
 Execute the below to evaluate the style of your code using `style50`.
