@@ -126,7 +126,10 @@ check50 scienceacademy/problems/2021/7/errors1
 Execute the below to evaluate the style of your code using `style50`.
 
 ```
-style50 functions.py
+style50 p1.py
+style50 p2.py
+style50 p3.py
+style50 p4.py
 ```
 
 {% next %}
