@@ -91,7 +91,7 @@ Did you notice that there was only one error message? It turns out that when Pyt
 
 This means that as you repeat the cycle of finding, fixing, and testing, you'll eventually work your way through every error in the code.
 
-Fix all of the errors in `p3.py`. Remember to keep running the program each time you change something. There are 5 things that need fixing!
+Fix all of the errors in `p3.py`. Remember to keep running the program each time you change something. There are 7 things that need fixing!
 
 {% next %}
 
