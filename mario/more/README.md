@@ -2,11 +2,11 @@
 
 ## World 1-1
 
-Toward the beginning of World 1-1 in Nintendo's Super Mario Brothers, Mario must hop over adjacent pyramids of blocks, per the below.
+Toward the beginning of World 1-1 in Nintendo's Super Mario Brothers, Mario must hop over adjacent pyramids of blocks, as shown below.
 
 ![screenshot of Mario jumping over adjacent pyramids](pyramids.png)
 
-Let's recreate those pyramids in Python, using hashes (`#`) for bricks, a la the below. Each hash is a bit taller than it is wide (at least for the font we're using), so the pyramids themselves will also appear taller than they are wide.
+Let's recreate those pyramids in Python, using hashes (`#`) for bricks, like shown below. Each hash is a bit taller than it is wide (at least for the font we're using), so the pyramids themselves will also appear taller than they are wide.
 
 ```
    #  #
@@ -15,7 +15,7 @@ Let's recreate those pyramids in Python, using hashes (`#`) for bricks, a la the
 ####  ####
 ```
 
-The program we'll write will be called `mario.py`. And let's allow the user to decide just how tall the pyramids should be by first prompting them for a positive integer between, say, 1 and 8, inclusive.
+The program you'll write will be called `mario.py`. And it also should allow the user to decide just how tall the pyramids should be by first prompting them for a positive integer between, say, 1 and 8, inclusive.
 
 Here's how the program might work if the user inputs `8` when prompted:
 
@@ -61,7 +61,7 @@ Height: 1
 #  #
 ```
 
-If the user doesn't, in fact, input a positive integer between 1 and 8, inclusive, when prompted, the program should re-prompt the user until they cooperate:
+If the user doesn't, in fact, input a positive integer between 1 and 8, inclusive, the program should re-prompt the user until they cooperate:
 
 ```
 $ python mario.py
@@ -76,9 +76,9 @@ Height: 4
 ####  ####
 ```
 
-Notice that width of the "gap" between adjacent pyramids is equal to the width of two hashes, irrespective of the pyramids' heights.
+Notice that width of the "gap" between adjacent pyramids is equal to the width of two hashes, regardless of the pyramids' heights.
 
-Write `mario.py` at right in such a way that it implements this program as described!
+Write `mario.py` at right so that it implements this program as described!
 
 ### How to Test Your Code
 

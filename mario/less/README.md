@@ -6,7 +6,7 @@ Toward the end of World 1-1 in Nintendo's _Super Mario Brothers_, Mario must asc
 
 ![screenshot of Mario jumping up a right-aligned pyramid](pyramid.png)
 
-Let's recreate that pyramid in Python, by using hashes (`#`) for bricks, a la the below. Each hash is a bit taller than it is wide (at least for the font we're using), so the pyramid itself will also appear taller than it is wide.
+Let's recreate that pyramid in Python, by using hashes (`#`) for bricks, like shown below. Each hash is a bit taller than it is wide (at least for the font we're using), so the pyramid itself will also appear taller than it is wide.
 
 ```
        #
@@ -19,7 +19,7 @@ Let's recreate that pyramid in Python, by using hashes (`#`) for bricks, a la th
 ########
 ```
 
-The program we'll write will be called `mario.py`. And let's allow the user to decide just how tall the pyramid should be by first prompting them for a positive integer between 1 and 8, inclusive.
+The program you'll write will be called `mario.py`. And it also should allow the user to decide just how tall the pyramid should be by first prompting them for a positive integer between 1 and 8, inclusive.
 
 Here's how the program might work if the user inputs `8` when prompted:
 
@@ -64,7 +64,7 @@ Height: 1
 #
 ```
 
-If the user doesn't, in fact, input a positive integer between 1 and 8, inclusive, when prompted, the program should re-prompt the user until they cooperate:
+If the user doesn't, in fact, input a positive integer between 1 and 8, inclusive, the program should re-prompt the user until they cooperate:
 
 ```
 $ python mario.py
@@ -94,7 +94,7 @@ There's more than one way to do this, so here's just one!
 1. Prompt user for height.
 1. If height is less than 1 or greater than 8 (or not an integer at all), go back to step one.
 1. Count *n* from 1 through height:
-    1. On iteration *n*, print *n* hashes
+    1. On step *n*, print *n* hashes
 
 It's okay to edit your own after seeing this pseudocode here, but don't simply copy/paste this into your own!
 
@@ -106,7 +106,7 @@ It's okay to edit your own after seeing this pseudocode here, but don't simply c
 
 Whatever your pseudocode, let's first write only the code that prompts (and re-prompts, as needed) the user for input.
 
-Specifically, modify `mario.py` at right in such a way that it prompts the user for the pyramid's height, storing their input in a variable as an integer, re-prompting the user again and again as needed if their input is not a positive integer between 1 and 8, inclusive. Then, just print the value of that variable, thereby confirming (for yourself) that you've indeed stored the user's input successfully, a la the below.
+Specifically, modify `mario.py` at right so that it prompts the user for the pyramid's height, storing their input in a variable as an integer. Make sure to re-prompt the user again and again if their input is not a positive integer between 1 and 8, inclusive. Then, just print the value of that variable to confirm (for yourself) that you've indeed stored the user's input successfully. Running the program should look like this:
 
 ```
 $ python mario.py
@@ -120,7 +120,6 @@ OK: 4
 
 {% spoiler "Hints" %}
 
-* Recall that you can print an `int` with `print()`.
 * Recall that you can convert the user's input with `int()`.
 * Don't forget to check for when the user enters a non-number, like "hi". Remember `try...except`?
 
@@ -128,7 +127,7 @@ OK: 4
 
 ## Building the Opposite
 
-Now that your program is (hopefully!) accepting input as prescribed, it's time for another step.
+Now that your program is (hopefully!) accepting input correctly, it's time for another step.
 
 It turns out it's a bit easier to build a left-aligned pyramid than right-, like this:
 
@@ -145,21 +144,19 @@ It turns out it's a bit easier to build a left-aligned pyramid than right-, like
 
 So let's build a left-aligned pyramid first and then, once that's working, right-align it instead!
 
-Modify `mario.py` at right such that it no longer simply prints the user's input but instead prints a left-aligned pyramid of that height.
+Modify `mario.py` at right so that it no longer prints the user's input but instead prints a left-aligned pyramid of that height.
 
 {% spoiler "Hints" %}
 
 * Keep in mind that a hash is just a character like any other, so you can print it with `print()`.
-* In Python we have a `for` loop, via which you can iterate some number times. Perhaps on each iteration, *i*, you could print that many hashes?
-* When you print something, Python automatically adds a newline at the end (as if you'd hit "Enter"). If you don't want this, you can tell `print()` to use a different "end". Example `print("#", end="")` would print nothing after.
-* You can actually "nest" loops, iterating with one variable (e.g., `i`) in the "outer" loop and another (e.g., `j`) in the "inner" loop. For instance, here's how you might print a square of height and width `n`, below. Of course, it's not a square that you want to print for this problem!
+* You've learned about the `for` loop: maybe on each iteration, *i*, you could print that many hashes?
+* When you multiply a string by an integer, you get that string repeated. For example:
 
+```python
+print("$" * 5)
 ```
-for i in range(n):
-    for j in range(n):
-        print("#", end="")
-    print("")
-```
+
+Would print `$$$$$`. This could be very helpful to you!
 
 {% endspoiler %}
 
@@ -167,7 +164,7 @@ for i in range(n):
 
 ## Right-Aligning with Dots
 
-Now, let's right-align that pyramid by pushing its hashes to the right by prefixing them with dots (i.e., periods), a la the below.
+Now, let's right-align that pyramid by pushing its hashes to the right by prefixing them with dots (i.e., periods), like this:
 
 ```
 .......#
@@ -180,17 +177,17 @@ Now, let's right-align that pyramid by pushing its hashes to the right by prefix
 ########
 ```
 
-Modify `mario.py` in such a way that it does exactly that!
+Modify `mario.py` so that it does exactly that!
 
 {% spoiler "Hint" %}
 
-Notice how the number of dots needed on each line is the "opposite" of the number of that line's hashes. For a pyramid of height 8, like the above, the first line has just 1 hash and thus 7 dots. The bottom line, meanwhile, has 8 hashes and thus 0 dots. Via what formula (or arithmetic, really) could you print the right number of dots and hashes on each line?
+Notice how the number of dots needed on each line is the "opposite" of the number of that line's hashes. For a pyramid of height 8, like the above, the first line has just 1 hash and 7 dots. The second line has 2 hashes and 6 dots, and so on. The bottom line has 8 hashes and 0 dots. Via what formula (or arithmetic, really) could you print the correct number of dots and hashes on each line?
 
 {% endspoiler %}
 
 ### How to Test Your Code
 
-Does your code work as prescribed when you input:
+Does your code work as required when you input:
 
 * `-1` (or other negative numbers)?
 * `0`?
