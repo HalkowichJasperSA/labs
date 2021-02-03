@@ -2,7 +2,7 @@
 
 ## World 1-1
 
-Toward the end of World 1-1 in Nintendo's _Super Mario Brothers_, Mario must ascend a right-aligned pyramid of blocks, as shown below.
+Toward the end of World 1-1 in Nintendo's _Super Mario Brothers_, Mario must climb a right-aligned pyramid of blocks, as shown below.
 
 ![screenshot of Mario jumping up a right-aligned pyramid](pyramid.png)
 
@@ -83,28 +83,9 @@ How to begin? Let's approach this problem one step at a time.
 
 {% next %}
 
-## Pseudocode
-
-First, write in `pseudocode.txt` at right some pseudocode that implements this program, even if you're not (yet!) sure how to write it in code. There's no one right way to write pseudocode, but short English sentences suffice. Odds are your pseudocode will use (or imply using!) one or more functions, conditions, Boolean expressions, loops, and/or variables.
-
-{% spoiler %}
-
-There's more than one way to do this, so here's just one!
-
-1. Prompt user for height.
-1. If height is less than 1 or greater than 8 (or not an integer at all), go back to step one.
-1. Count *n* from 1 through height:
-    1. On step *n*, print *n* hashes
-
-It's okay to edit your own after seeing this pseudocode here, but don't simply copy/paste this into your own!
-
-{% endspoiler %}
-
-{% next %}
-
 ## Prompting for Input
 
-Whatever your pseudocode, let's first write only the code that prompts (and re-prompts, as needed) the user for input.
+Let's first write only the code that prompts (and re-prompts, as needed) the user for input.
 
 Specifically, modify `mario.py` at right so that it prompts the user for the pyramid's height, storing their input in a variable as an integer. Make sure to re-prompt the user again and again if their input is not a positive integer between 1 and 8, inclusive. Then, just print the value of that variable to confirm (for yourself) that you've indeed stored the user's input successfully. Running the program should look like this:
 
@@ -121,7 +102,14 @@ OK: 4
 {% spoiler "Hints" %}
 
 * Recall that you can convert the user's input with `int()`.
-* Don't forget to check for when the user enters a non-number, like "hi". Remember `try...except`?
+* Don't forget to check for when the user enters a non-number, like "hi". Remember the `try...except` example we did in class?
+
+```python
+try:
+    num = int(input("Pick a number: "))
+except ValueError:
+    print("That's not a number!")
+```
 
 {% endspoiler %}
 
