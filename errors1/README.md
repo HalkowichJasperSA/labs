@@ -105,9 +105,9 @@ Wait a minute! Did you get `0`? What's going on? Try and think about it before c
 
 {% spoiler "Hint" %}
 
-The code loops through the list of numbers, multiplying each time, but since `product` starts out as `0`, the result is `0 * 4 * 9 * 3 * 7`.
+The code loops through the list of numbers, multiplying each time, but since `result` starts out as `0`, the result is `0 * 4 * 9 * 3 * 7`.
 
-Oops! What should `product` be?
+Oops! What should `result` be?
 
 {% endspoiler %}
 
