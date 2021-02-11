@@ -83,7 +83,7 @@ How to begin? Let's approach this problem one step at a time.
 
 {% next %}
 
-## Prompting for Input
+## Step 1: Prompting for Input
 
 Let's first write only the code that prompts (and re-prompts, as needed) the user for input.
 
@@ -113,7 +113,7 @@ except ValueError:
 
 {% endspoiler %}
 
-## Building the Opposite
+## Step 2: Building the Opposite
 
 Now that your program is (hopefully!) accepting input correctly, it's time for another step.
 
@@ -150,7 +150,7 @@ Would print `$$$$$`. This could be very helpful to you!
 
 {% next %}
 
-## Right-Aligning with Dots
+## Step 3: Right-Aligning with Dots
 
 Now, let's right-align that pyramid by pushing its hashes to the right by prefixing them with dots (i.e., periods), like this:
 
@@ -173,7 +173,7 @@ Notice how the number of dots needed on each line is the "opposite" of the numbe
 
 {% endspoiler %}
 
-### How to Test Your Code
+### Test Your Code
 
 Does your code work as required when you input:
 
@@ -186,7 +186,7 @@ Does your code work as required when you input:
 
 {% next %}
 
-## Removing the Dots
+## Step 4: Removing the Dots
 
 All that remains now is a finishing flourish! Modify your program so that it prints spaces instead of those dots!
 
