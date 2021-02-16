@@ -45,7 +45,7 @@ Here's what's there already:
 
 * Remember how you looped through each character to count vowels? Can you do the same kind of loop again to count each letter's points?
 
-* You can find if a character is a letter of the alphabet using `isalpha()`. For example, `"a".isalpha()` would return `True`. `"!".is_alpha()` would be `False`.
+* You can find if a character is a letter of the alphabet using `isalpha()`. For example, `"a".isalpha()` would return `True`. `"!".isalpha()` would be `False`.
 
 * Printing out the scores is a good way to check if your program is working correctly. You can remove the `print()` statements when you're done.
 
