@@ -17,17 +17,19 @@ In the game of [Scrabble](https://scrabble.hasbro.com/en-us/rules), players crea
 |-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
 |1|3|3|2|1|4|2|4|1|8|5|1|3|1|1|3|10|1|1|1|1|4|4|8|4|10|
 
-For example, if we wanted to score the word `Code`, we would note that in general Scrabble rules, the `C` is worth `3` points, the `o` is worth `1` point, the `d` is worth `2` points, and the `e` is worth `1` point. Summing these, we get that `Code` is worth `3+1+2+1 = 7` points.
+For example, if we wanted to score the word `Code`, we would see that the `C` is worth `3` points, the `o` is worth `1` point, the `d` is worth `2` points, and the `e` is worth `1` point. Summing these, we get that `Code` is worth `3+1+2+1 = 7` points.
 
-## Implementation Details
+## Your task
 
 Finish `scrabble.py` at right, so that it finds the winner of a short scrabble-like game, where two players each enter their word, and the higher scoring player wins.
+
+Here's what's there already:
 
 * You've been provided the point values of each letter of the alphabet in a dictionary named `POINTS`.
 
   * For example, `A` or `a` is worth 1 point (represented by `POINTS["a"]`), `B` or `b` is worth 3 points (represented by `POINTS["b"]`), etc.
 
-* You have a function called `score()` that takes a string as input and returns an `int`. Whenever you want to assign point values to a particular word, you can call this function.
+* You have a function called `score()` that takes a string as input and returns an `int`. Whenever you want to assign point values to a particular word, you can call this function. For example, `score("code")` should return `7`.
 
 * The program prompts the two players for their words using the `input()` function. These values are stored inside variables named `p1` and `p2`.
 
@@ -39,15 +41,19 @@ Finish `scrabble.py` at right, so that it finds the winner of a short scrabble-l
 
 ### Hints
 
-* You may find the string function `lower()` to be helpful.
+* You may find the string function `lower()` to be helpful. We used it in class and in Lab 6.
 
-* You can find if a character is a letter of the alphabet using `isalpha()`. For example, `"a".isalpha()` would return `True`.
+* Remember how you looped through each character to count vowels? Can you do the same kind of loop again to count each letter's points?
+
+* You can find if a character is a letter of the alphabet using `isalpha()`. For example, `"a".isalpha()` would return `True`. `"!".is_alpha()` would be `False`.
 
 * Printing out the scores is a good way to check if your program is working correctly. You can remove the `print()` statements when you're done.
 
+* Make sure you print *exactly* what the examples show!
+
 ### How to Test Your Code
 
-Your program should behave as the examples below.
+Your program should behave like the examples below.
 
 ```
 $ python scrabble.py
