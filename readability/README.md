@@ -169,6 +169,8 @@ n = round(n)  # n becomes 3
 
 If the resulting index number is 16 or higher (equivalent to or greater than a senior undergraduate reading level), your program should output `"Grade 16+"` instead of giving the exact index number. If the index number is less than 1, your program should output `"Before Grade 1"`.
 
+**Don't forget to delete the three `print()` statements in the three functions. They were just for testing!**
+
 ## How to Test Your Code
 
 Try running your program on the following texts.
