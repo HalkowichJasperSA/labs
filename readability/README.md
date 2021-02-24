@@ -176,6 +176,7 @@ If the resulting index number is 16 or higher (equivalent to or greater than a s
 Try running your program on the following texts.
 
 > One fish. Two fish. Red fish. Blue fish.
+
 (Before Grade 1)
 
 > Would you like them here or there? I would not like them here or there. I would not like them anywhere.
