@@ -10,7 +10,7 @@ def count_words(text):
     print(num_words, "word(s)")
     return num_words
 
-def num_sentences(text):
+def count_sentences(text):
     # TODO: Count the number of sentences
     num_sentences = 0
     print(num_sentences, "sentence(s)")
