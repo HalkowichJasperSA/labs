@@ -4,11 +4,13 @@ def count_letters(text):
     print(num_letters, "letter(s)")
     return num_letters
 
+
 def count_words(text):
     # TODO: Count the number of words
     num_words = 0
     print(num_words, "word(s)")
     return num_words
+
 
 def count_sentences(text):
     # TODO: Count the number of sentences
